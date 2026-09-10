@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "./",
+    "title": "Hello!",
     "section": "",
-    "text": "This is my Quarto website."
+    "text": "this is my website.\n\n\n\nfun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat.\n\n\nit’s a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on"
   },
   {
     "objectID": "about.html",
