@@ -1,0 +1,26 @@
+---
+title: "Projects"
+toc: false
+---
+
+a few things i'm working on - more to add as i go.
+
+## float
+
+a privacy-focused personal agent & workspace with memory and tools.
+
+[github](https://github.com/CherryResearch/float) · [introducing float](https://cherryresearch.github.io/post.html?post=introducing-float)
+
+## en habit
+
+a work in progress personal habit tracker
+
+[open en habit](https://en-habit.ch3rry.chatgpt.site/) (reach out to request access)
+
+## OCELOT
+
+OCR based text recognition and editing, organized around selectable text regions.
+
+[github](https://github.com/firecat1234/OCELOT-)
+
+<!-- Add more projects here, including RL work if/when there is something public to link. -->

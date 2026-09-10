@@ -1,10 +1,38 @@
 [
   {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "a few things i’m working on. more to add as i go."
+  },
+  {
+    "objectID": "projects.html#float",
+    "href": "projects.html#float",
+    "title": "Projects",
+    "section": "float",
+    "text": "float\na personal agent workspace with memory and tools.\ngithub · introducing float"
+  },
+  {
+    "objectID": "projects.html#en-habit",
+    "href": "projects.html#en-habit",
+    "title": "Projects",
+    "section": "en habit",
+    "text": "en habit\na work in progress.\nopen en habit (access restricted)"
+  },
+  {
+    "objectID": "projects.html#ocelot",
+    "href": "projects.html#ocelot",
+    "title": "Projects",
+    "section": "OCELOT",
+    "text": "OCELOT\ntext recognition and editing, organized around selectable text regions.\ngithub"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Hello!",
     "section": "",
-    "text": "this is my website.\n\n\n\nfun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat.\n\n\nit’s a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on"
+    "text": "thanks for visiting my website! my name is kai. this is a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on.\n\n\n\nfun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat 😸\n\n\ni am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning. before this, i studied economics, and worked as a data analyst. —-fix below later i like making things somewhere between language, statistics, perception, and interactive systems. this is a place for those projects and smaller digital artifacts: experiments, useful tools, things that work, and things i’m still figuring out. i’ll link projects here and write about what i’m working on as it happens."
   },
   {
     "objectID": "about.html",

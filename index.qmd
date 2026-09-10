@@ -3,10 +3,8 @@ title: "Hello!"
 body-classes: home-page
 ---
 
-my name is kai - thanks for visiting my website. it's a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on.
+thanks for visiting my website! my name is kai. this is a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on.
 
 ![*fun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat 😸*](/images/CX_fire-cat-profile-inspired.png)
 
-i am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning. before this, i studied economics, and worked as a data analyst. 
-----fix below later
-i like making things somewhere between language, statistics, perception, and interactive systems. this is a place for those projects and smaller digital artifacts: experiments, useful tools, things that work, and things i’m still figuring out. i’ll link projects here and write about what i’m working on as it happens.
+i like making things, especially 
