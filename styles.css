@@ -135,9 +135,9 @@ h1.title, h1, h2, h3, h4, h5, h6 {
   font-style: italic;
 }
 
-/* Gray panel stays translucent while text remains fully opaque. */
+/* Muted lavender: HSV 270deg / 20% / 82.35%, with 80% opacity. */
 main.content {
-  background-color: rgb(210 210 210 / 80%);
+  background-color: rgb(189 168 210 / 80%);
   padding: clamp(1rem, 3vw, 2rem);
   border-radius: 0.5rem;
   align-self: start;

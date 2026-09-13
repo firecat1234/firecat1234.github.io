@@ -4,6 +4,12 @@ title: "About"
 
 ## about me :
 
-i am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning. before this, i studied economics, and worked as a data analyst. 
-----fix below later
-i like making things somewhere between language, statistics, perception, and interactive systems. this is a place for those projects and smaller digital artifacts: experiments, useful tools, things that work, and things i’m still figuring out. i’ll link projects here and write about what i’m working on as it happens.
+i am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning.
+
+## background
+
+before this, i studied economics, and worked as a data analyst.
+
+## what i'm building
+
+i'm interested in language, machine learning, and making things of my own. check out [my profile](https://github.com/firecat1234) to see my repositories and learn more about what i've been building.

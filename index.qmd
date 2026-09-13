@@ -5,6 +5,6 @@ body-classes: home-page
 
 thanks for visiting my website! my name is kai. this is a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on.
 
-![*fun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat 😸*](/images/CX_fire-cat-profile-inspired.png)
+![*fun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat 😸*](/images/CX_fire-cat-profile-inspired.png "another fun fact, conveniently the name kai means fire in scottish & this is where i display my file contents (bash cat joke)"){fig-alt="another fun fact: conveniently, the name kai means fire in scottish & this is where i display my file contents (bash cat joke)"}
 
-i like making things, especially 
+i like making things, especially when i can combine technical and creative elements. in my work, i value user interaction, openness, and clear communication.

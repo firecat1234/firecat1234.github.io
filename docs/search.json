@@ -32,20 +32,69 @@
     "href": "index.html",
     "title": "Hello!",
     "section": "",
-    "text": "thanks for visiting my website! my name is kai. this is a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on.\n\n\n\nfun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat 😸\n\n\ni like making things, especially"
+    "text": "thanks for visiting my website! my name is kai. this is a place for my projects & digital artifacts, large and small. some serious projects, some experiments, and occasionally sharing whatever i’m working on.\n\n\n\nfun fact: my github username started as a pytorch concatenate joke. i’ve forgotten the joke, but kept the cat 😸\n\n\ni like making things, especially when i can combine technical and creative elements. in my work, i value user interaction, openness, and clear communication."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "i am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning. before this, i studied economics, and worked as a data analyst. —-fix below later i like making things somewhere between language, statistics, perception, and interactive systems. this is a place for those projects and smaller digital artifacts: experiments, useful tools, things that work, and things i’m still figuring out. i’ll link projects here and write about what i’m working on as it happens."
+    "text": "i am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning."
   },
   {
     "objectID": "about.html#about-me",
     "href": "about.html#about-me",
     "title": "About",
     "section": "",
-    "text": "i am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning. before this, i studied economics, and worked as a data analyst. —-fix below later i like making things somewhere between language, statistics, perception, and interactive systems. this is a place for those projects and smaller digital artifacts: experiments, useful tools, things that work, and things i’m still figuring out. i’ll link projects here and write about what i’m working on as it happens."
+    "text": "i am currently studying computational linguistics, building on my personal learning in data science, software development, and machine learning."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "background",
+    "text": "background\nbefore this, i studied economics, and worked as a data analyst."
+  },
+  {
+    "objectID": "about.html#what-im-building",
+    "href": "about.html#what-im-building",
+    "title": "About",
+    "section": "what i’m building",
+    "text": "what i’m building\ni’m interested in language, machine learning, and making things of my own. check out my profile to see my repositories and learn more about what i’ve been building."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "what i’ve been up to\n\n\n\n\n\n\n\n\nSep 12, 2026\n\n\nkai\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/first/index.html",
+    "href": "posts/first/index.html",
+    "title": "what i’ve been up to",
+    "section": "",
+    "text": "I just started a masters of data science program. going back to learn the fundamentals of computational linguistics has meant familiarizing myself with a subtly different set of tools. Data science platforms like R and Python are familiar to me, but digging into the details of Quarto (what this site is built with), standardizing my installs, getting used to uv (which is quite nice) and organizing everything has already taught me a lot that I missed on my own."
+  },
+  {
+    "objectID": "posts/first/index.html#what-ive-been-up-to",
+    "href": "posts/first/index.html#what-ive-been-up-to",
+    "title": "what i’ve been up to",
+    "section": "",
+    "text": "I just started a masters of data science program. going back to learn the fundamentals of computational linguistics has meant familiarizing myself with a subtly different set of tools. Data science platforms like R and Python are familiar to me, but digging into the details of Quarto (what this site is built with), standardizing my installs, getting used to uv (which is quite nice) and organizing everything has already taught me a lot that I missed on my own."
+  },
+  {
+    "objectID": "posts/first/index.html#making-my-workspace-my-own",
+    "href": "posts/first/index.html#making-my-workspace-my-own",
+    "title": "what i’ve been up to",
+    "section": "making my workspace my own",
+    "text": "making my workspace my own\nI’ve been enthusiastic about finding ways to use AI to help with the setup around my work. I’ve been using Codex to keep track of my projects and deadlines, with an agents file asking it to help me understand what I’ve missed and diagnose errors while leaving the coursework to me. Lots of little things the agent helped with made the process nicer: importing a theme from my other project into Positron and figuring out why my pipe and comment hotkeys weren’t working - after trying the same two settings over and over, it pointed out i just had to switch from visual mode to source view. Small things, but they make the workspace feel more like somewhere I want to spend time while letting me focus on what I want to say and do.\n\n\n\nmaking my workspace my own, including the colours."
+  },
+  {
+    "objectID": "posts/first/index.html#how-i-got-here",
+    "href": "posts/first/index.html#how-i-got-here",
+    "title": "what i’ve been up to",
+    "section": "how i got here",
+    "text": "how i got here\nI’ve always enjoyed working with computers, and recently been getting more seriously interested in language, machine learning, and making things of my own. This has meant learning pytorch, trying some RL experiments, vibe-coding CV apps with mediapipe, a lot of random readings, and trying to piece everything together through projects. Coming back to study feels like a chance to understand more about what’s underneath the hood.\n\nI used OpenAI Codex to help draft and edit this post, and OpenAI’s image tool to crop and redact the screenshot."
   }
 ]
