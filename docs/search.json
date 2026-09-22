@@ -18,14 +18,14 @@
     "href": "projects.html#en-habit",
     "title": "Projects",
     "section": "en habit",
-    "text": "en habit\na work in progress personal habit tracker\nopen en habit (reach out to request access)"
+    "text": "en habit\na work in progress personal habit tracker, wardrobe catalog, and photo journal.\nopen en habit (reach out to request access)"
   },
   {
     "objectID": "projects.html#ocelot",
     "href": "projects.html#ocelot",
     "title": "Projects",
     "section": "OCELOT",
-    "text": "OCELOT\nOCR based text recognition and editing, organized around selectable text regions.\ngithub"
+    "text": "OCELOT\noriginally made for cataloguing Magic: The Gathering cards. OCR based text recognition and editing, organized around selectable text regions.\ngithub"
   },
   {
     "objectID": "index.html",
@@ -96,5 +96,19 @@
     "title": "what i’ve been up to",
     "section": "how i got here",
     "text": "how i got here\nI’ve always enjoyed working with computers, and recently been getting more seriously interested in language, machine learning, and making things of my own. This has meant learning pytorch, trying some RL experiments, vibe-coding CV apps with mediapipe, a lot of random readings, and trying to piece everything together through projects. Coming back to study feels like a chance to understand more about what’s underneath the hood.\n\nI used OpenAI Codex to help draft and edit this post, and OpenAI’s image tool to crop and redact the screenshot."
+  },
+  {
+    "objectID": "projects.html#factory-cat",
+    "href": "projects.html#factory-cat",
+    "title": "Projects",
+    "section": "factory cat",
+    "text": "factory cat\na browser game in progress about being a stray cat in a cat-food factory. explore, cause trouble, and find somewhere to nap.\nopen factory cat (reach out to request access)"
+  },
+  {
+    "objectID": "projects.html#riftlock",
+    "href": "projects.html#riftlock",
+    "title": "Projects",
+    "section": "riftlock",
+    "text": "riftlock\nan early Deadlock analysis lab for match history, hero performance, and item/build ideas. live history can be incomplete; there’s a sample dashboard to explore too.\nopen riftlock (reach out to request access)"
   }
 ]
