@@ -11,21 +11,21 @@
     "href": "projects.html#float",
     "title": "Projects",
     "section": "float",
-    "text": "float\na privacy-focused personal agent & workspace with memory and tools.\ngithub · introducing float"
+    "text": "float\n\na privacy-focused personal agent & workspace with memory and tools.\ngithub · introducing float"
   },
   {
     "objectID": "projects.html#en-habit",
     "href": "projects.html#en-habit",
     "title": "Projects",
     "section": "en habit",
-    "text": "en habit\na work in progress personal habit tracker, wardrobe catalog, and photo journal.\nopen en habit (reach out to request access)"
+    "text": "en habit\n\na work in progress personal habit tracker, wardrobe catalog, and photo journal.\nopen en habit (reach out to request access)"
   },
   {
     "objectID": "projects.html#ocelot",
     "href": "projects.html#ocelot",
     "title": "Projects",
     "section": "OCELOT",
-    "text": "OCELOT\noriginally made for cataloguing Magic: The Gathering cards. OCR based text recognition and editing, organized around selectable text regions.\ngithub"
+    "text": "OCELOT\n\noriginally made for cataloguing Magic: The Gathering cards. OCR based text recognition and editing, organized around selectable text regions.\ngithub"
   },
   {
     "objectID": "index.html",
@@ -102,13 +102,13 @@
     "href": "projects.html#factory-cat",
     "title": "Projects",
     "section": "factory cat",
-    "text": "factory cat\na browser game in progress about being a stray cat in a cat-food factory. explore, cause trouble, and find somewhere to nap.\nopen factory cat (reach out to request access)"
+    "text": "factory cat\n\na browser game in progress about being a stray cat in a cat-food factory. explore, cause trouble, and find somewhere to nap.\nopen factory cat (reach out to request access)"
   },
   {
     "objectID": "projects.html#riftlock",
     "href": "projects.html#riftlock",
     "title": "Projects",
     "section": "riftlock",
-    "text": "riftlock\nan early Deadlock analysis lab for match history, hero performance, and item/build ideas. live history can be incomplete; there’s a sample dashboard to explore too.\nopen riftlock (reach out to request access)"
+    "text": "riftlock\n\nan early Deadlock analysis lab for match history, hero performance, and item/build ideas. live history can be incomplete; there’s a sample dashboard to explore too.\nopen riftlock (reach out to request access)"
   }
 ]

@@ -145,21 +145,15 @@ main.content {
 
 /* Small project previews; open the image to see the full screenshot. */
 .project-entry {
-  display: grid;
-  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
-  gap: 1.25rem;
-  align-items: center;
   margin: 2rem 0;
-}
-
-.project-entry > p {
-  margin: 0;
 }
 
 .project-preview {
   display: block;
   width: 100%;
+  max-width: 320px;
   height: auto;
+  margin-bottom: 1rem;
   border: 1px solid rgb(50 35 65 / 35%);
   border-radius: 0.35rem;
 }
@@ -169,21 +163,10 @@ main.content {
   outline-offset: 4px;
 }
 
-.project-details h2 {
+.project-entry h2 {
   margin-top: 0;
 }
 
-.project-details > :last-child {
+.project-entry > :last-child {
   margin-bottom: 0;
-}
-
-@media (max-width: 600px) {
-  .project-entry {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.75rem;
-  }
-
-  .project-preview {
-    max-width: 320px;
-  }
 }

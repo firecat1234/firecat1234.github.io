@@ -7,77 +7,62 @@ a few things i'm working on - more to add as i go.
 
 ::: {.project-entry}
 
-<a href="images/projects/CX_float.png"><img class="project-preview" src="images/projects/CX_float-thumb.png" alt="float's chat workspace, conversation history, and agent console" loading="lazy" width="2557" height="1255"></a>
-
-::: {.project-details}
-
 ## float
+
+<a href="images/projects/CX_float.png"><img class="project-preview" src="images/projects/CX_float-thumb.png" alt="float's chat workspace, conversation history, and agent console" loading="lazy" width="2557" height="1255"></a>
 
 a privacy-focused personal agent & workspace with memory and tools.
 
 [github](https://github.com/CherryResearch/float) · [introducing float](https://cherryresearch.github.io/post.html?post=introducing-float)
 
 :::
-:::
 
 ::: {.project-entry}
 
-<a href="images/projects/CX_en-habit.png"><img class="project-preview" src="images/projects/CX_en-habit.png" alt="en habit's habits du jour dashboard with sample cues" loading="lazy"></a>
-
-::: {.project-details}
-
 ## en habit
+
+<a href="images/projects/CX_en-habit.png"><img class="project-preview" src="images/projects/CX_en-habit.png" alt="en habit's habits du jour dashboard with sample cues" loading="lazy"></a>
 
 a work in progress personal habit tracker, wardrobe catalog, and photo journal.
 
 [open en habit](https://en-habit.ch3rry.chatgpt.site/) (reach out to request access)
 
 :::
-:::
 
 ::: {.project-entry}
 
-<a href="images/projects/CX_factory-cat.png"><img class="project-preview" src="images/projects/CX_factory-cat.png" alt="a cat exploring the isometric factory floor in Factory Cat" loading="lazy"></a>
-
-::: {.project-details}
-
 ## factory cat
+
+<a href="images/projects/CX_factory-cat.png"><img class="project-preview" src="images/projects/CX_factory-cat.png" alt="a cat exploring the isometric factory floor in Factory Cat" loading="lazy"></a>
 
 a browser game in progress about being a stray cat in a cat-food factory. explore, cause trouble, and find somewhere to nap.
 
 [open factory cat](https://factory-cat-game.ch3rry.chatgpt.site/) (reach out to request access)
 
 :::
-:::
 
 ::: {.project-entry}
 
-<a href="images/projects/CX_riftlock.png"><img class="project-preview" src="images/projects/CX_riftlock.png" alt="Riftlock's Deadlock analysis dashboard showing a fictional sample player's results" loading="lazy"></a>
-
-::: {.project-details}
-
 ## riftlock
+
+<a href="images/projects/CX_riftlock.png"><img class="project-preview" src="images/projects/CX_riftlock.png" alt="Riftlock's Deadlock analysis dashboard showing a fictional sample player's results" loading="lazy"></a>
 
 an early Deadlock analysis lab for match history, hero performance, and item/build ideas. live history can be incomplete; there's a sample dashboard to explore too.
 
 [open riftlock](https://riftlock-deadlock-lab.ch3rry.chatgpt.site/) (reach out to request access)
 
 :::
-:::
 
 ::: {.project-entry}
 
-<a href="images/projects/CX_ocelot.png" title="alesha, who smiles at death"><img class="project-preview" src="images/projects/CX_ocelot-thumb.png" alt="OCELOT's image controls, recognized text regions, and OCR results for an Alesha Magic deck" loading="lazy" width="720" height="434"></a>
-
-::: {.project-details}
-
 ## OCELOT
+
+<a href="images/projects/CX_ocelot.png" title="alesha, who smiles at death"><img class="project-preview" src="images/projects/CX_ocelot-thumb.png" alt="OCELOT's image controls, recognized text regions, and OCR results for an Alesha Magic deck" loading="lazy" width="720" height="434"></a>
 
 originally made for cataloguing Magic: The Gathering cards. OCR based text recognition and editing, organized around selectable text regions.
 
 [github](https://github.com/firecat1234/OCELOT-)
 
-:::
 :::
 
 <!-- Screenshots: Float uses its published docs/ui-snapshot-2026-04-12.png.
