@@ -1,0 +1,89 @@
+---
+title: "R deck wins"
+description: "Creature stats, mana costs, and colours in Amonkhet."
+author: "firecat1234"
+date: 2026-09-22
+categories: [MTG, Amonkhet, R]
+engine: knitr
+execute:
+  echo: true
+---
+
+As an example of what can be done with R inside of a Quarto website, I'll be accessing, working with, and analyzing freely licensed data from Amonkhet, one of my favourite Magic the Gathering sets. To start, make sure you have the data, and load it into R:
+
+```{r}
+#| label: download-source-data
+#| eval: false
+#| echo: true
+#one time download 
+#run manually from the repository root, normal renders use saved file
+
+data_url <- "https://mtgjson.com/api/v5/AKH.json"
+data_file <- "data/AKH.json"
+
+if (!file.exists(data_file)) {
+  download.file(data_url, data_file, mode = "wb")
+  dir.create("data", showWarnings = FALSE)} else {
+  message("Using the existing snapshot: ", data_file)}
+```
+
+```{r}
+#read file 
+payload <- jsonlite::fromJSON("data/AKH.json")
+cards <- payload$data$cards
+str(cards)
+```
+
+I prefer working with CSV over JSON, so let's change that real quick - 
+```{r}
+#prepare csv-friendly dataframe by unwrapping the JSON  
+scalars <- c("name", "manaValue", "power", "toughness", "rarity", "text", "edhrecRank")
+lists <- c("colors", "types", "subtypes", "keywords") #the lists need to be parsed in CSV 
+flat_cards <- cards[c(scalars, lists)] #create the dataframe to write
+
+#combine these into a single value delimited with ";" to differentiate from commas
+for (field in lists) {
+  flat_cards[[field]] <- vapply(flat_cards[[field]],
+    function(values) paste(values, collapse = ";"), character(1))
+}
+
+write.csv(flat_cards, "data/akh_cards.csv", row.names = FALSE, fileEncoding = "UTF-8")
+```
+
+## What colour looks strongest?
+
+As a quick measure, without actually trying any of the cards, we can look at the 'rate' on each creature in the set. There are a lot of rules and abilities going on in this game, so it's a simplistic analysis, but might give good results. To do this, we will sum their 'power' and 'toughness' and compare it to their cost. Then, we can group by colour to see who has the best rate.
+
+```{r}
+
+
+```
+
+
+## A little tournament context
+
+For a quick look back at Standard, here are the five most-played AKH cards from each article's published card table, ordered by copies. These are historical highlights: the articles cover different deck samples, and card counts measure usage rather than win rates. For brevity, we only looked at creatures here, and most of these cards aren't creatures, but these demonstrate what happened to be good in the context of the actual environment they were played in.
+
+### Pro Tour Amonkhet
+
+Source: SaffronOlive, [Pro Tour Amonkhet: By the Numbers](https://www.mtggoldfish.com/articles/pro-tour-amonkhet-by-the-numbers), MTGGoldfish, May 15, 2017. The counts below come from the article's Amonkhet-only table for Day Two.
+
+| AKH card | Copies in Day Two decks |
+|:---|---:|
+| Liliana's Mastery | 228 |
+| Dread Wanderer | 224 |
+| Magma Spray | 220 |
+| Lord of the Accursed | 212 |
+| Dispossess | 160 |
+
+### Pro Tour Hour of Devastation (the set following, also set on Amonkhet)
+
+Source: SaffronOlive, [Pro Tour Hour of Devastation: By the Numbers](https://www.mtggoldfish.com/articles/pro-tour-hour-of-devastation-by-the-numbers), MTGGoldfish, July 31, 2017. These are the AKH cards in the article's overall top-20 table; counts refer to its deck sample.
+
+| AKH card | Copies in sample | Decks containing card |
+|:---|---:|---:|
+| Magma Spray | 168 | 58 |
+| Sunscorched Desert | 164 | 41 |
+| Ahn-Crop Crasher | 156 | 39 |
+| Glorybringer | 135 | 52 |
+| Hazoret the Fervent | 114 | 39 |

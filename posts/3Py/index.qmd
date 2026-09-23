@@ -1,0 +1,10 @@
+---
+title: "please read the fine print"
+description: "Exploring rules-text length and mechanics in Amonkhet."
+author: "firecat1234"
+date: 2026-09-22
+categories: [MTG, Amonkhet, Python]
+jupyter: python3
+execute:
+  echo: true
+---
