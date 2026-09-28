@@ -2,5 +2,7 @@
 title: "Blog"
 listing:
   contents: posts
-  sort: "date desc"
+  sort:
+    - "date desc"
+    - "series-order desc" # Show later parts first when publication dates match.
 ---

@@ -3,6 +3,7 @@ title: "R deck wins"
 description: "Creature stats, mana costs, and colours in Amonkhet."
 author: "firecat1234"
 date: 2026-09-22
+series-order: 1
 categories: [MTG, Amonkhet, R]
 engine: knitr
 execute:
