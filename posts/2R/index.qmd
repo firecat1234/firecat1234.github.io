@@ -37,11 +37,12 @@ str(cards)
 I prefer working with CSV over JSON, so let's change that real quick - 
 ```{r}
 #prepare csv-friendly dataframe by unwrapping the JSON  
-scalars <- c("name", "manaValue", "power", "toughness", "rarity", "text", "edhrecRank")
+scalars <- c("name", "manaValue", "power", "toughness", "rarity", "text", "edhrecRank", "isReprint")
 lists <- c("colors", "types", "subtypes", "keywords") #the lists need to be parsed in CSV 
 flat_cards <- cards[c(scalars, lists)] #create the dataframe to write
-
-#combine these into a single value delimited with ";" to differentiate from commas
+# MTGJSON omits this flag for non-reprints; export an explicit FALSE.
+flat_cards$isReprint[is.na(flat_cards$isReprint)] <- FALSE
+#combine these into a single value delimited with ";" for lists to differentiate from commas
 for (field in lists) {
   flat_cards[[field]] <- vapply(flat_cards[[field]],
     function(values) paste(values, collapse = ";"), character(1))
@@ -55,10 +56,93 @@ write.csv(flat_cards, "data/akh_cards.csv", row.names = FALSE, fileEncoding = "U
 As a quick measure, without actually trying any of the cards, we can look at the 'rate' on each creature in the set. There are a lot of rules and abilities going on in this game, so it's a simplistic analysis, but might give good results. To do this, we will sum their 'power' and 'toughness' and compare it to their cost. Then, we can group by colour to see who has the best rate.
 
 ```{r}
+#| label: prepare-creature-efficiency
+#| message: false
 
+library(dplyr)
+library(ggplot2)
 
+creatures <- flat_cards |>
+  filter(grepl("Creature", types)) |>
+  distinct(name, .keep_all = TRUE) |> # count each card once, not each printing
+  mutate(
+    # Variable stats such as "*" become NA and are excluded below.
+    power = suppressWarnings(as.numeric(power)),
+    toughness = suppressWarnings(as.numeric(toughness)),
+    efficiency = (power + toughness) / pmax(manaValue, 1), #to avoid dividing by 0, we set divide these by 1, the earliest turn they can be played
+    colour = case_when(
+      colors == "W" ~ "White",
+      colors == "U" ~ "Blue",
+      colors == "B" ~ "Black",
+      colors == "R" ~ "Red",
+      colors == "G" ~ "Green",
+      colors == "" ~ "Colourless",
+      TRUE ~ "Multicolour"
+    )
+  ) |>
+  filter(!is.na(efficiency))
+
+# Use the same colours for both charts; Overall gets a neutral fill.
+colour_palette <- c(
+  White = "#F8E7B9", Blue = "#4B91CA", Black = "#35313C",
+  Red = "#D85C4A", Green = "#559569", Colourless = "#B9B5AC",
+  Multicolour = "#e6be21", Overall = "#720e9d"
+)
 ```
 
+I define efficiency as power plus toughness divided by mana value, treating a cost of zero as one for this comparison. Each card is counted once, and creatures with nonnumeric stats are left out. Multicoloured creatures have their own group, and the Gods stay in the analysis.
+
+### Average efficiency by colour
+
+```{r}
+#| label: fig-average-creature-efficiency
+#| fig-cap: "Mean creature stat efficiency by colour. Overall includes every retained creature once, including multicoloured and colourless creatures."
+#| fig-width: 9
+#| fig-height: 5
+
+colour_summary <- creatures |>
+  group_by(colour) |>
+  summarise(mean_efficiency = mean(efficiency), .groups = "drop")
+
+# Overall is the mean across cards, not the mean of the group means.
+colour_summary <- colour_summary |>
+  bind_rows(summarise(creatures,
+    colour = "Overall", mean_efficiency = mean(efficiency))) |>
+  mutate(colour = factor(colour, levels = names(colour_palette)))
+
+ggplot(colour_summary, aes(x = colour, y = mean_efficiency, fill = colour)) +
+  geom_col(colour = "grey30", show.legend = FALSE) +
+  scale_fill_manual(values = colour_palette) +
+  labs(x = NULL, y = "Mean stat efficiency") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+### The ten most efficient creatures
+
+For this chart, I sort by efficiency and then by name to break ties, keeping exactly ten cards. This score compares printed stats with cost; it does not account for abilities or restrictions.
+
+```{r}
+#| label: fig-top-ten-creature-efficiency
+#| fig-cap: "The ten highest creature stat-efficiency scores in the retained AKH data, coloured by card colour group. Ties at the cutoff are resolved alphabetically."
+#| fig-width: 10
+#| fig-height: 6
+
+top_creatures <- creatures |>
+  arrange(desc(efficiency), name) |>
+  slice_head(n = 10) |>
+  mutate(name = factor(name, levels = name)) # keep this order on the x-axis
+
+ggplot(top_creatures, aes(x = name, y = efficiency, fill = colour)) +
+  geom_col(colour = "grey30") +
+  scale_fill_manual(values = colour_palette) +
+  labs(x = NULL, y = "Stat efficiency", fill = "Colour") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom"
+  )
+```
 
 ## A little tournament context
 

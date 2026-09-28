@@ -1,0 +1,513 @@
+"name","manaValue","power","toughness","rarity","text","edhrecRank","isReprint","colors","types","subtypes","keywords"
+"Angel of Sanctions",5,"3","4","mythic","Flying
+When this creature enters, you may exile target nonland permanent an opponent controls until this creature leaves the battlefield.
+Embalm {5}{W} ({5}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)",8805,FALSE,"W","Creature","Angel","Embalm;Flying"
+"Anointed Procession",4,NA,NA,"rare","If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.",365,FALSE,"W","Enchantment","",""
+"Anointer Priest",2,"1","3","common","Whenever a creature token you control enters, you gain 1 life.
+Embalm {3}{W} ({3}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery.)",11410,FALSE,"W","Creature","Human;Cleric","Embalm"
+"Approach of the Second Sun",7,NA,NA,"rare","If this spell was cast from your hand and you've cast another spell named Approach of the Second Sun this game, you win the game. Otherwise, put Approach of the Second Sun into its owner's library seventh from the top and you gain 7 life.",992,FALSE,"W","Sorcery","",""
+"Aven Mindcensor",3,"2","1","rare","Flash
+Flying
+If an opponent would search a library, that player searches the top four cards of that library instead.",1237,TRUE,"W","Creature","Bird;Wizard","Flash;Flying"
+"Binding Mummy",2,"2","2","common","Whenever another Zombie you control enters, you may tap target artifact or creature.",9243,FALSE,"W","Creature","Zombie",""
+"Cartouche of Solidarity",1,NA,NA,"common","Enchant creature you control
+When this Aura enters, create a 1/1 white Warrior creature token with vigilance.
+Enchanted creature gets +1/+1 and has first strike. (It deals combat damage before creatures without first strike.)",10305,FALSE,"W","Enchantment","Aura;Cartouche","Enchant"
+"Cast Out",4,NA,NA,"uncommon","Flash
+When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.
+Cycling {W} ({W}, Discard this card: Draw a card.)",5257,FALSE,"W","Enchantment","","Cycling;Flash"
+"Compulsory Rest",2,NA,NA,"common","Enchant creature
+Enchanted creature can't attack or block.
+Enchanted creature has ""{2}, Sacrifice this creature: You gain 2 life.""",23280,FALSE,"W","Enchantment","Aura","Enchant"
+"Devoted Crop-Mate",3,"3","2","uncommon","You may exert this creature as it attacks. When you do, return target creature card with mana value 2 or less from your graveyard to the battlefield. (An exerted creature won't untap during your next untap step.)",25353,FALSE,"W","Creature","Human;Warrior","Exert"
+"Djeru's Resolve",1,NA,NA,"common","Untap target creature. Prevent all damage that would be dealt to it this turn.
+Cycling {2} ({2}, Discard this card: Draw a card.)",13782,FALSE,"W","Instant","","Cycling"
+"Fan Bearer",1,"1","2","common","{2}, {T}: Tap target creature.",24141,FALSE,"W","Creature","Zombie",""
+"Forsake the Worldly",3,NA,NA,"common","Exile target artifact or enchantment.
+Cycling {2} ({2}, Discard this card: Draw a card.)",9512,FALSE,"W","Instant","","Cycling"
+"Gideon of the Trials",3,NA,NA,"mythic","[+1]: Until your next turn, prevent all damage target permanent would deal.
+[0]: Until end of turn, Gideon becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.
+[0]: You get an emblem with ""As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.""",10772,FALSE,"W","Planeswalker","Gideon",""
+"Gideon's Intervention",4,NA,NA,"rare","As this enchantment enters, choose a card name.
+Your opponents can't cast spells with the chosen name.
+Prevent all damage that would be dealt to you and permanents you control by sources with the chosen name.",20780,FALSE,"W","Enchantment","",""
+"Glory-Bound Initiate",2,"3","1","rare","You may exert this creature as it attacks. When you do, it gets +1/+3 and gains lifelink until end of turn. (An exerted creature won't untap during your next untap step.)",23992,FALSE,"W","Creature","Human;Warrior","Exert"
+"Gust Walker",2,"2","2","common","You may exert this creature as it attacks. When you do, it gets +1/+1 and gains flying until end of turn. (An exerted creature won't untap during your next untap step.)",28780,FALSE,"W","Creature","Human;Wizard","Exert"
+"Impeccable Timing",2,NA,NA,"common","Impeccable Timing deals 3 damage to target attacking or blocking creature.",24500,TRUE,"W","Instant","",""
+"In Oketra's Name",2,NA,NA,"common","Zombies you control get +2/+1 until end of turn. Other creatures you control get +1/+1 until end of turn.",24757,FALSE,"W","Instant","",""
+"Mighty Leap",2,NA,NA,"common","Target creature gets +2/+2 and gains flying until end of turn.",19325,TRUE,"W","Instant","",""
+"Oketra the True",4,"3","6","mythic","Double strike, indestructible
+Oketra can't attack or block unless you control at least three other creatures.
+{3}{W}: Create a 1/1 white Warrior creature token with vigilance.",8033,FALSE,"W","Creature","God","Double strike;Indestructible"
+"Oketra's Attendant",5,"3","3","uncommon","Flying
+Cycling {2} ({2}, Discard this card: Draw a card.)
+Embalm {3}{W}{W} ({3}{W}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Soldier with no mana cost. Embalm only as a sorcery.)",22405,FALSE,"W","Creature","Bird;Soldier","Cycling;Embalm;Flying"
+"Protection of the Hekma",5,NA,NA,"uncommon","If a source an opponent controls would deal damage to you, prevent 1 of that damage.",25885,FALSE,"W","Enchantment","",""
+"Regal Caracal",5,"3","3","rare","Other Cats you control get +1/+1 and have lifelink. (Damage dealt by those creatures also causes you to gain that much life.)
+When this creature enters, create two 1/1 white Cat creature tokens with lifelink.",2992,FALSE,"W","Creature","Cat",""
+"Renewed Faith",3,NA,NA,"uncommon","You gain 6 life.
+Cycling {1}{W} ({1}{W}, Discard this card: Draw a card.)
+When you cycle this card, you may gain 2 life.",16331,TRUE,"W","Instant","","Cycling"
+"Rhet-Crop Spearmaster",3,"3","1","common","You may exert this creature as it attacks. When you do, it gets +1/+0 and gains first strike until end of turn. (An exerted creature won't untap during your next untap step.)",30019,FALSE,"W","Creature","Human;Warrior","Exert"
+"Sacred Cat",1,"1","1","common","Lifelink
+Embalm {W} ({W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Cat with no mana cost. Embalm only as a sorcery.)",8265,FALSE,"W","Creature","Cat","Embalm;Lifelink"
+"Seraph of the Suns",7,"4","4","uncommon","Flying
+Indestructible (Damage and effects that say ""destroy"" don't destroy this creature. If its toughness is 0 or less, it still dies.)",22862,FALSE,"W","Creature","Angel","Flying;Indestructible"
+"Sparring Mummy",4,"3","3","common","When this creature enters, untap target creature.",18636,FALSE,"W","Creature","Zombie",""
+"Supply Caravan",5,"3","5","common","When this creature enters, if you control a tapped creature, create a 1/1 white Warrior creature token with vigilance.",30445,FALSE,"W","Creature","Camel",""
+"Tah-Crop Elite",4,"2","2","common","Flying
+You may exert this creature as it attacks. When you do, creatures you control get +1/+1 until end of turn. (An exerted creature won't untap during your next untap step.)",26277,FALSE,"W","Creature","Bird;Warrior","Exert;Flying"
+"Those Who Serve",3,"2","4","common",NA,28365,FALSE,"W","Creature","Zombie",""
+"Time to Reflect",1,NA,NA,"uncommon","Exile target creature that blocked or was blocked by a Zombie this turn.",24116,FALSE,"W","Instant","",""
+"Trial of Solidarity",3,NA,NA,"uncommon","When this enchantment enters, creatures you control get +2/+1 and gain vigilance until end of turn.
+When a Cartouche you control enters, return this enchantment to its owner's hand.",28795,FALSE,"W","Enchantment","",""
+"Trueheart Duelist",2,"2","2","uncommon","This creature can block an additional creature each combat.
+Embalm {2}{W} ({2}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery.)",25561,FALSE,"W","Creature","Human;Warrior","Embalm"
+"Unwavering Initiate",3,"3","2","common","Vigilance
+Embalm {4}{W} ({4}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery.)",28418,FALSE,"W","Creature","Human;Warrior","Embalm;Vigilance"
+"Vizier of Deferment",3,"2","2","uncommon","Flash
+When this creature enters, you may exile target creature if it attacked or blocked this turn. Return that card to the battlefield under its owner's control at the beginning of the next end step.",23536,FALSE,"W","Creature","Human;Cleric","Flash"
+"Vizier of Remedies",2,"2","1","uncommon","If one or more -1/-1 counters would be put on a creature you control, that many -1/-1 counters minus one are put on it instead.",11714,FALSE,"W","Creature","Human;Cleric",""
+"Winged Shepherd",6,"3","3","common","Flying, vigilance
+Cycling {W} ({W}, Discard this card: Draw a card.)",19884,FALSE,"W","Creature","Angel","Cycling;Flying;Vigilance"
+"Ancient Crab",3,"1","5","common",NA,17070,TRUE,"U","Creature","Crab",""
+"Angler Drake",6,"4","4","uncommon","Flying
+When this creature enters, you may return target creature to its owner's hand.",24622,FALSE,"U","Creature","Drake","Flying"
+"As Foretold",3,NA,NA,"mythic","At the beginning of your upkeep, put a time counter on this enchantment.
+Once each turn, you may pay {0} rather than pay the mana cost for a spell you cast with mana value X or less, where X is the number of time counters on this enchantment.",1874,FALSE,"U","Enchantment","",""
+"Aven Initiate",4,"3","2","common","Flying
+Embalm {6}{U} ({6}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)",27939,FALSE,"U","Creature","Bird;Warrior","Embalm;Flying"
+"Cancel",3,NA,NA,"common","Counter target spell.",2067,TRUE,"U","Instant","",""
+"Cartouche of Knowledge",2,NA,NA,"common","Enchant creature you control
+When this Aura enters, draw a card.
+Enchanted creature gets +1/+1 and has flying.",9726,FALSE,"U","Enchantment","Aura;Cartouche","Enchant"
+"Censor",2,NA,NA,"uncommon","Counter target spell unless its controller pays {1}.
+Cycling {U} ({U}, Discard this card: Draw a card.)",13410,FALSE,"U","Instant","","Cycling"
+"Compelling Argument",2,NA,NA,"common","Target player mills five cards.
+Cycling {U} ({U}, Discard this card: Draw a card.)",16462,FALSE,"U","Sorcery","","Cycling;Mill"
+"Cryptic Serpent",7,"6","5","uncommon","This spell costs {1} less to cast for each instant and sorcery card in your graveyard.",17516,FALSE,"U","Creature","Serpent",""
+"Curator of Mysteries",4,"4","4","rare","Flying
+Whenever you cycle or discard another card, scry 1.
+Cycling {U} ({U}, Discard this card: Draw a card.)",8078,FALSE,"U","Creature","Sphinx","Cycling;Flying;Scry"
+"Decision Paralysis",4,NA,NA,"common","Tap up to two target creatures. Those creatures don't untap during their controller's next untap step.",27208,FALSE,"U","Instant","",""
+"Drake Haven",3,NA,NA,"rare","Whenever you cycle or discard a card, you may pay {1}. If you do, create a 2/2 blue Drake creature token with flying.",8742,FALSE,"U","Enchantment","",""
+"Essence Scatter",2,NA,NA,"common","Counter target creature spell.",2698,TRUE,"U","Instant","",""
+"Floodwaters",6,NA,NA,"common","Return up to two target creatures to their owners' hands.
+Cycling {2} ({2}, Discard this card: Draw a card.)",25660,FALSE,"U","Sorcery","","Cycling"
+"Galestrike",3,NA,NA,"uncommon","Return target tapped creature to its owner's hand.
+Draw a card.",21290,FALSE,"U","Instant","",""
+"Glyph Keeper",5,"5","3","rare","Flying
+Whenever this creature becomes the target of a spell or ability for the first time each turn, counter that spell or ability.
+Embalm {5}{U}{U} ({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost. Embalm only as a sorcery.)",21124,FALSE,"U","Creature","Sphinx","Embalm;Flying"
+"Hekma Sentinels",3,"2","3","common","Whenever you cycle or discard a card, this creature gets +1/+1 until end of turn.",28817,FALSE,"U","Creature","Human;Cleric",""
+"Hieroglyphic Illumination",4,NA,NA,"common","Draw two cards.
+Cycling {U} ({U}, Discard this card: Draw a card.)",11863,FALSE,"U","Instant","","Cycling"
+"Illusory Wrappings",3,NA,NA,"common","Enchant creature
+Enchanted creature has base power and toughness 0/2.",27925,FALSE,"U","Enchantment","Aura","Enchant"
+"Kefnet the Mindful",3,"5","5","mythic","Flying, indestructible
+Kefnet can't attack or block unless you have seven or more cards in hand.
+{3}{U}: Draw a card, then you may return a land you control to its owner's hand.",7297,FALSE,"U","Creature","God","Flying;Indestructible"
+"Labyrinth Guardian",2,"2","3","uncommon","When this creature becomes the target of a spell, sacrifice it.
+Embalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Illusion Warrior with no mana cost. Embalm only as a sorcery.)",28538,FALSE,"U","Creature","Illusion;Warrior","Embalm"
+"Lay Claim",7,NA,NA,"uncommon","Enchant permanent
+You control enchanted permanent.
+Cycling {2} ({2}, Discard this card: Draw a card.)",17140,FALSE,"U","Enchantment","Aura","Cycling;Enchant"
+"Naga Oracle",4,"2","4","common","When this creature enters, surveil 3. (Look at the top three cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",28120,FALSE,"U","Creature","Snake;Cleric","Surveil"
+"New Perspectives",6,NA,NA,"rare","When this enchantment enters, draw three cards.
+As long as you have seven or more cards in hand, you may pay {0} rather than pay cycling costs.",12529,FALSE,"U","Enchantment","",""
+"Open into Wonder",2,NA,NA,"uncommon","X target creatures can't be blocked this turn. Until end of turn, those creatures gain ""Whenever this creature deals combat damage to a player, draw a card.""",7648,FALSE,"U","Sorcery","",""
+"Pull from Tomorrow",2,NA,NA,"rare","Draw X cards, then discard a card.",935,FALSE,"U","Instant","",""
+"River Serpent",6,"5","5","common","This creature can't attack unless there are five or more cards in your graveyard.
+Cycling {U} ({U}, Discard this card: Draw a card.)",19006,FALSE,"U","Creature","Serpent","Cycling"
+"Sacred Excavation",4,NA,NA,"uncommon","Return up to two target cards with cycling from your graveyard to your hand.",21993,FALSE,"U","Sorcery","",""
+"Scribe of the Mindful",3,"2","2","common","{1}, {T}, Sacrifice this creature: Return target instant or sorcery card from your graveyard to your hand.",21990,FALSE,"U","Creature","Human;Cleric",""
+"Seeker of Insight",2,"1","3","common","{T}: Draw a card, then discard a card. Activate only if you've cast a noncreature spell this turn.",27255,FALSE,"U","Creature","Human;Wizard",""
+"Shimmerscale Drake",5,"3","4","common","Flying
+Cycling {2} ({2}, Discard this card: Draw a card.)",26189,FALSE,"U","Creature","Drake","Cycling;Flying"
+"Slither Blade",1,"1","2","common","This creature can't be blocked.",1726,FALSE,"U","Creature","Snake;Rogue",""
+"Tah-Crop Skirmisher",2,"2","1","common","Embalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Snake Warrior with no mana cost. Embalm only as a sorcery.)",29732,FALSE,"U","Creature","Snake;Warrior","Embalm"
+"Trial of Knowledge",4,NA,NA,"uncommon","When this enchantment enters, draw three cards, then discard a card.
+When a Cartouche you control enters, return this enchantment to its owner's hand.",21975,FALSE,"U","Enchantment","",""
+"Vizier of Many Faces",4,"0","0","rare","You may have this creature enter as a copy of any creature on the battlefield, except if this creature was embalmed, the token has no mana cost, it's white, and it's a Zombie in addition to its other types.
+Embalm {3}{U}{U}",4324,FALSE,"U","Creature","Shapeshifter;Cleric","Embalm"
+"Vizier of Tumbling Sands",3,"1","3","uncommon","{T}: Untap another target permanent.
+Cycling {1}{U} ({1}{U}, Discard this card: Draw a card.)
+When you cycle this card, untap target permanent.",3388,FALSE,"U","Creature","Human;Cleric","Cycling"
+"Winds of Rebuke",2,NA,NA,"common","Return target nonland permanent to its owner's hand. Each player mills two cards.",9854,FALSE,"U","Instant","","Mill"
+"Zenith Seeker",4,"2","2","uncommon","Flying
+Whenever you cycle or discard a card, target creature gains flying until end of turn.",25718,FALSE,"U","Creature","Bird;Wizard","Flying"
+"Archfiend of Ifnir",5,"5","4","rare","Flying
+Whenever you cycle or discard another card, put a -1/-1 counter on each creature your opponents control.
+Cycling {2} ({2}, Discard this card: Draw a card.)",1290,FALSE,"B","Creature","Demon","Cycling;Flying"
+"Baleful Ammit",3,"4","3","uncommon","Lifelink
+When this creature enters, put a -1/-1 counter on target creature you control.",19975,FALSE,"B","Creature","Crocodile;Demon","Lifelink"
+"Blighted Bat",3,"2","1","common","Flying
+{1}: This creature gains haste until end of turn.",21423,FALSE,"B","Creature","Zombie;Bat","Flying"
+"Bone Picker",4,"3","2","uncommon","This spell costs {3} less to cast if a creature died this turn.
+Flying, deathtouch",18119,FALSE,"B","Creature","Bird","Deathtouch;Flying"
+"Bontu the Glorified",3,"4","6","mythic","Menace, indestructible
+Bontu can't attack or block unless a creature died under your control this turn.
+{1}{B}, Sacrifice another creature: Scry 1. Each opponent loses 1 life and you gain 1 life.",9855,FALSE,"B","Creature","God","Indestructible;Menace;Scry"
+"Cartouche of Ambition",3,NA,NA,"common","Enchant creature you control
+When this Aura enters, you may put a -1/-1 counter on target creature.
+Enchanted creature gets +1/+1 and has lifelink.",15515,FALSE,"B","Enchantment","Aura;Cartouche","Enchant"
+"Cruel Reality",7,NA,NA,"mythic","Enchant player
+At the beginning of enchanted player's upkeep, that player sacrifices a creature or planeswalker of their choice. If the player can't, they lose 5 life.",9983,FALSE,"B","Enchantment","Aura;Curse","Enchant"
+"Cursed Minotaur",3,"3","2","common","Menace (This creature can't be blocked except by two or more creatures.)",22057,FALSE,"B","Creature","Zombie;Minotaur","Menace"
+"Dispossess",3,NA,NA,"rare","Choose an artifact card name. Search target opponent's graveyard, hand, and library for any number of cards with the chosen name and exile them. Then that player shuffles.",28100,FALSE,"B","Sorcery","",""
+"Doomed Dissenter",2,"1","1","common","When this creature dies, create a 2/2 black Zombie creature token.",7848,FALSE,"B","Creature","Human",""
+"Dread Wanderer",1,"2","1","rare","This creature enters tapped.
+{2}{B}: Return this card from your graveyard to the battlefield. Activate only as a sorcery and only if you have one or fewer cards in hand.",18986,FALSE,"B","Creature","Zombie;Jackal",""
+"Dune Beetle",2,"1","4","common",NA,24105,FALSE,"B","Creature","Insect",""
+"Faith of the Devoted",3,NA,NA,"uncommon","Whenever you cycle or discard a card, you may pay {1}. If you do, each opponent loses 2 life and you gain 2 life.",8059,FALSE,"B","Enchantment","",""
+"Festering Mummy",1,"1","1","common","When this creature dies, you may put a -1/-1 counter on target creature.",12619,FALSE,"B","Creature","Zombie",""
+"Final Reward",5,NA,NA,"common","Exile target creature.",23583,FALSE,"B","Instant","",""
+"Gravedigger",4,"2","2","uncommon","When this creature enters, you may return target creature card from your graveyard to your hand.",8973,TRUE,"B","Creature","Zombie",""
+"Grim Strider",4,"6","6","uncommon","This creature gets -1/-1 for each card in your hand.",29523,FALSE,"B","Creature","Horror",""
+"Horror of the Broken Lands",5,"4","4","common","Whenever you cycle or discard another card, this creature gets +2/+1 until end of turn.
+Cycling {B} ({B}, Discard this card: Draw a card.)",16352,FALSE,"B","Creature","Horror","Cycling"
+"Lay Bare the Heart",2,NA,NA,"uncommon","Target opponent reveals their hand. You choose a nonlegendary, nonland card from it. That player discards that card.",25010,FALSE,"B","Sorcery","",""
+"Liliana, Death's Majesty",5,NA,NA,"mythic","[+1]: Create a 2/2 black Zombie creature token. Mill two cards.
+[−3]: Return target creature card from your graveyard to the battlefield. That creature is a black Zombie in addition to its other colors and types.
+[−7]: Destroy all non-Zombie creatures.",2084,FALSE,"B","Planeswalker","Liliana","Mill"
+"Liliana's Mastery",5,NA,NA,"rare","Zombies you control get +1/+1.
+When this enchantment enters, create two 2/2 black Zombie creature tokens.",4854,FALSE,"B","Enchantment","",""
+"Lord of the Accursed",3,"2","3","uncommon","Other Zombies you control get +1/+1.
+{1}{B}, {T}: All Zombies gain menace until end of turn.",2001,FALSE,"B","Creature","Zombie",""
+"Miasmic Mummy",2,"2","2","common","When this creature enters, each player discards a card.",12629,FALSE,"B","Creature","Zombie;Jackal",""
+"Nest of Scarabs",3,NA,NA,"uncommon","Whenever you put one or more -1/-1 counters on a creature, create that many 1/1 black Insect creature tokens.",3492,FALSE,"B","Enchantment","",""
+"Painful Lesson",3,NA,NA,"common","Target player draws two cards and loses 2 life.",11884,FALSE,"B","Sorcery","",""
+"Pitiless Vizier",4,"4","2","common","Whenever you cycle or discard a card, this creature gains indestructible until end of turn. (Damage and effects that say ""destroy"" don't destroy it. If its toughness is 0 or less, it still dies.)",26168,FALSE,"B","Creature","Minotaur;Cleric",""
+"Plague Belcher",3,"5","4","rare","Menace
+When this creature enters, put two -1/-1 counters on target creature you control.
+Whenever another Zombie you control dies, each opponent loses 1 life.",3690,FALSE,"B","Creature","Zombie;Beast","Menace"
+"Ruthless Sniper",1,"1","2","uncommon","Whenever you cycle or discard a card, you may pay {1}. If you do, put a -1/-1 counter on target creature.",18361,FALSE,"B","Creature","Human;Archer",""
+"Scarab Feast",1,NA,NA,"common","Exile up to three target cards from a single graveyard.
+Cycling {B} ({B}, Discard this card: Draw a card.)",20117,FALSE,"B","Instant","","Cycling"
+"Shadow of the Grave",2,NA,NA,"rare","Return to your hand all cards in your graveyard that you cycled or discarded this turn.",8815,FALSE,"B","Instant","",""
+"Soulstinger",4,"4","5","common","When this creature enters, put two -1/-1 counters on target creature you control.
+When this creature dies, you may put a -1/-1 counter on target creature for each -1/-1 counter on this creature.",19796,FALSE,"B","Creature","Scorpion;Demon",""
+"Splendid Agony",3,NA,NA,"common","Distribute two -1/-1 counters among one or two target creatures.",15190,FALSE,"B","Instant","",""
+"Stir the Sands",6,NA,NA,"uncommon","Create three 2/2 black Zombie creature tokens.
+Cycling {3}{B} ({3}{B}, Discard this card: Draw a card.)
+When you cycle this card, create a 2/2 black Zombie creature token.",22972,FALSE,"B","Sorcery","","Cycling"
+"Supernatural Stamina",1,NA,NA,"common","Until end of turn, target creature gets +2/+0 and gains ""When this creature dies, return it to the battlefield tapped under its owner's control.""",1765,FALSE,"B","Instant","",""
+"Trespasser's Curse",2,NA,NA,"common","Enchant player
+Whenever a creature enchanted player controls enters, that player loses 1 life and you gain 1 life.",5167,FALSE,"B","Enchantment","Aura;Curse","Enchant"
+"Trial of Ambition",2,NA,NA,"uncommon","When this enchantment enters, target opponent sacrifices a creature of their choice.
+When a Cartouche you control enters, return this enchantment to its owner's hand.",25019,FALSE,"B","Enchantment","",""
+"Unburden",3,NA,NA,"common","Target player discards two cards.
+Cycling {2} ({2}, Discard this card: Draw a card.)",21964,TRUE,"B","Sorcery","","Cycling"
+"Wander in Death",3,NA,NA,"common","Return up to two target creature cards from your graveyard to your hand.
+Cycling {2} ({2}, Discard this card: Draw a card.)",16312,FALSE,"B","Sorcery","","Cycling"
+"Wasteland Scorpion",3,"2","2","common","Deathtouch
+Cycling {2} ({2}, Discard this card: Draw a card.)",22004,FALSE,"B","Creature","Scorpion","Cycling;Deathtouch"
+"Ahn-Crop Crasher",3,"3","2","uncommon","Haste (This creature can attack and {T} as soon as it comes under your control.)
+You may exert this creature as it attacks. When you do, target creature can't block this turn. (An exerted creature won't untap during your next untap step.)",17226,FALSE,"R","Creature","Minotaur;Warrior","Exert;Haste"
+"Battlefield Scavenger",2,"2","2","uncommon","You may exert this creature as it attacks. (It won't untap during your next untap step.)
+Whenever you exert a creature, you may discard a card. If you do, draw a card.",26009,FALSE,"R","Creature","Jackal;Rogue","Exert"
+"Blazing Volley",1,NA,NA,"common","Blazing Volley deals 1 damage to each creature your opponents control.",4349,FALSE,"R","Sorcery","",""
+"Bloodlust Inciter",1,"1","1","common","{T}: Target creature gains haste until end of turn. (It can attack and {T} this turn.)",12915,FALSE,"R","Creature","Human;Warrior",""
+"Bloodrage Brawler",2,"4","3","uncommon","When this creature enters, discard a card.",19443,FALSE,"R","Creature","Minotaur;Warrior",""
+"Brute Strength",2,NA,NA,"common","Target creature gets +3/+1 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)",9258,TRUE,"R","Instant","",""
+"By Force",1,NA,NA,"uncommon","Destroy X target artifacts.",6919,FALSE,"R","Sorcery","",""
+"Cartouche of Zeal",1,NA,NA,"common","Enchant creature you control
+When this Aura enters, target creature can't block this turn.
+Enchanted creature gets +1/+1 and has haste. (It can attack and {T} no matter when it came under your control.)",15396,FALSE,"R","Enchantment","Aura;Cartouche","Enchant"
+"Combat Celebrant",3,"4","1","mythic","If this creature hasn't been exerted this turn, you may exert it as it attacks. When you do, untap all other creatures you control and after this phase, there is an additional combat phase. (An exerted creature won't untap during your next untap step.)",1006,FALSE,"R","Creature","Human;Warrior","Exert"
+"Consuming Fervor",1,NA,NA,"uncommon","Enchant creature
+Enchanted creature gets +3/+3 and has ""At the beginning of your upkeep, put a -1/-1 counter on this creature.""",21998,FALSE,"R","Enchantment","Aura","Enchant"
+"Deem Worthy",5,NA,NA,"uncommon","Deem Worthy deals 7 damage to target creature.
+Cycling {3}{R} ({3}{R}, Discard this card: Draw a card.)
+When you cycle this card, you may have it deal 2 damage to target creature.",21811,FALSE,"R","Instant","","Cycling"
+"Desert Cerodon",6,"6","4","common","Cycling {R} ({R}, Discard this card: Draw a card.)",20368,FALSE,"R","Creature","Beast","Cycling"
+"Electrify",4,NA,NA,"common","Electrify deals 4 damage to target creature.",24684,FALSE,"R","Instant","",""
+"Emberhorn Minotaur",4,"4","3","common","You may exert this creature as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. (An exerted creature won't untap during your next untap step. A creature with menace can't be blocked except by two or more creatures.)",24092,FALSE,"R","Creature","Minotaur;Warrior","Exert"
+"Flameblade Adept",1,"1","2","uncommon","Menace
+Whenever you cycle or discard a card, this creature gets +1/+0 until end of turn.",19019,FALSE,"R","Creature","Jackal;Warrior","Menace"
+"Fling",2,NA,NA,"common","As an additional cost to cast this spell, sacrifice a creature.
+Fling deals damage equal to the sacrificed creature's power to any target.",1453,TRUE,"R","Instant","",""
+"Glorious End",3,NA,NA,"mythic","End the turn. (Exile all spells and abilities from the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and ""this turn"" and ""until end of turn"" effects end.)
+At the beginning of your next end step, you lose the game.",10610,FALSE,"R","Instant","",""
+"Glorybringer",5,"4","4","rare","Flying, haste
+You may exert this creature as it attacks. When you do, it deals 4 damage to target non-Dragon creature an opponent controls. (An exerted creature won't untap during your next untap step.)",7413,FALSE,"R","Creature","Dragon","Exert;Flying;Haste"
+"Harsh Mentor",2,"2","2","rare","Whenever an opponent activates an ability of an artifact, creature, or land on the battlefield, if it isn't a mana ability, this creature deals 2 damage to that player.",2421,FALSE,"R","Creature","Human;Cleric",""
+"Hazoret the Fervent",4,"5","4","mythic","Indestructible, haste
+Hazoret can't attack or block unless you have one or fewer cards in hand.
+{2}{R}, Discard a card: Hazoret deals 2 damage to each opponent.",15358,FALSE,"R","Creature","God","Haste;Indestructible"
+"Hazoret's Favor",3,NA,NA,"rare","At the beginning of combat on your turn, you may have target creature you control get +2/+0 and gain haste until end of turn. If you do, sacrifice it at the beginning of the next end step.",22549,FALSE,"R","Enchantment","",""
+"Heart-Piercer Manticore",4,"4","3","rare","When this creature enters, you may sacrifice another creature. When you do, this creature deals damage equal to that creature's power to any target.
+Embalm {5}{R} ({5}{R}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Manticore with no mana cost. Embalm only as a sorcery.)",19470,FALSE,"R","Creature","Manticore","Embalm"
+"Hyena Pack",4,"3","4","common",NA,31047,FALSE,"R","Creature","Hyena",""
+"Limits of Solidarity",4,NA,NA,"uncommon","Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+Cycling {2} ({2}, Discard this card: Draw a card.)",21907,FALSE,"R","Sorcery","","Cycling"
+"Magma Spray",1,NA,NA,"common","Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.",17863,TRUE,"R","Instant","",""
+"Manticore of the Gauntlet",5,"5","4","common","When this creature enters, put a -1/-1 counter on target creature you control. This creature deals 3 damage to target opponent or planeswalker.",30547,FALSE,"R","Creature","Manticore",""
+"Minotaur Sureshot",3,"2","3","common","Reach (This creature can block creatures with flying.)
+{1}{R}: This creature gets +1/+0 until end of turn.",22178,FALSE,"R","Creature","Minotaur;Archer","Reach"
+"Nef-Crop Entangler",2,"2","1","common","Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
+You may exert this creature as it attacks. When you do, it gets +1/+2 until end of turn. (An exerted creature won't untap during your next untap step.)",28248,FALSE,"R","Creature","Human;Warrior","Exert;Trample"
+"Nimble-Blade Khenra",2,"1","3","common","Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",26625,FALSE,"R","Creature","Jackal;Warrior","Prowess"
+"Pathmaker Initiate",2,"2","1","common","{T}: Target creature with power 2 or less can't be blocked this turn.",17673,FALSE,"R","Creature","Human;Wizard",""
+"Pursue Glory",4,NA,NA,"common","Attacking creatures get +2/+0 until end of turn.
+Cycling {2} ({2}, Discard this card: Draw a card.)",24653,FALSE,"R","Instant","","Cycling"
+"Soul-Scar Mage",1,"1","2","rare","Prowess
+If a source you control would deal noncombat damage to a creature an opponent controls, put that many -1/-1 counters on that creature instead.",12814,FALSE,"R","Creature","Human;Wizard","Prowess"
+"Sweltering Suns",3,NA,NA,"rare","Sweltering Suns deals 3 damage to each creature.
+Cycling {3} ({3}, Discard this card: Draw a card.)",11394,FALSE,"R","Sorcery","","Cycling"
+"Thresher Lizard",3,"3","2","common","This creature gets +1/+2 as long as you have one or fewer cards in hand.",30098,FALSE,"R","Creature","Lizard",""
+"Tormenting Voice",2,NA,NA,"common","As an additional cost to cast this spell, discard a card.
+Draw two cards.",1887,TRUE,"R","Sorcery","",""
+"Trial of Zeal",3,NA,NA,"uncommon","When this enchantment enters, it deals 3 damage to any target.
+When a Cartouche you control enters, return this enchantment to its owner's hand.",28875,FALSE,"R","Enchantment","",""
+"Trueheart Twins",5,"4","4","uncommon","You may exert this creature as it attacks. (It won't untap during your next untap step.)
+Whenever you exert a creature, creatures you control get +1/+0 until end of turn.",27242,FALSE,"R","Creature","Jackal;Warrior","Exert"
+"Violent Impact",4,NA,NA,"common","Destroy target artifact or land.
+Cycling {2} ({2}, Discard this card: Draw a card.)",20370,FALSE,"R","Sorcery","","Cycling"
+"Warfire Javelineer",4,"2","3","uncommon","When this creature enters, it deals X damage to target creature an opponent controls, where X is the number of instant and sorcery cards in your graveyard.",26258,FALSE,"R","Creature","Minotaur;Warrior",""
+"Benefaction of Rhonas",3,NA,NA,"common","Reveal the top five cards of your library. You may put a creature card and/or an enchantment card from among them into your hand. Put the rest into your graveyard.",19270,FALSE,"G","Sorcery","",""
+"Bitterblade Warrior",2,"2","2","common","You may exert this creature as it attacks. When you do, it gets +1/+0 and gains deathtouch until end of turn. (An exerted creature won't untap during your next untap step.)",25877,FALSE,"G","Creature","Jackal;Warrior","Exert"
+"Cartouche of Strength",3,NA,NA,"common","Enchant creature you control
+When this Aura enters, you may have enchanted creature fight target creature an opponent controls. (Each deals damage equal to its power to the other.)
+Enchanted creature gets +1/+1 and has trample.",10608,FALSE,"G","Enchantment","Aura;Cartouche","Enchant;Fight"
+"Champion of Rhonas",4,"3","3","rare","You may exert this creature as it attacks. When you do, you may put a creature card from your hand onto the battlefield. (An exerted creature won't untap during your next untap step.)",14151,FALSE,"G","Creature","Jackal;Warrior","Exert"
+"Channeler Initiate",2,"3","4","rare","When this creature enters, put three -1/-1 counters on target creature you control.
+{T}, Remove a -1/-1 counter from this creature: Add one mana of any color.",5874,FALSE,"G","Creature","Human;Druid",""
+"Colossapede",5,"5","5","common",NA,19558,FALSE,"G","Creature","Insect",""
+"Crocodile of the Crossing",4,"5","4","uncommon","Haste
+When this creature enters, put a -1/-1 counter on target creature you control.",26084,FALSE,"G","Creature","Crocodile","Haste"
+"Defiant Greatmaw",3,"4","5","uncommon","When this creature enters, put two -1/-1 counters on target creature you control.
+Whenever you put one or more -1/-1 counters on this creature, remove a -1/-1 counter from another target creature you control.",21772,FALSE,"G","Creature","Hippo",""
+"Dissenter's Deliverance",2,NA,NA,"common","Destroy target artifact.
+Cycling {G} ({G}, Discard this card: Draw a card.)",20066,FALSE,"G","Instant","","Cycling"
+"Exemplar of Strength",2,"4","4","uncommon","When this creature enters, put three -1/-1 counters on target creature you control.
+Whenever this creature attacks, remove a -1/-1 counter from it. If you do, you gain 1 life.",24545,FALSE,"G","Creature","Human;Warrior",""
+"Giant Spider",4,"2","4","common","Reach (This creature can block creatures with flying.)",19487,TRUE,"G","Creature","Spider","Reach"
+"Gift of Paradise",3,NA,NA,"common","Enchant land
+When this Aura enters, you gain 3 life.
+Enchanted land has ""{T}: Add two mana of any one color.""",6831,FALSE,"G","Enchantment","Aura","Enchant"
+"Greater Sandwurm",7,"7","7","common","This creature can't be blocked by creatures with power 2 or less.
+Cycling {2} ({2}, Discard this card: Draw a card.)",11753,FALSE,"G","Creature","Wurm","Cycling"
+"Hapatra's Mark",1,NA,NA,"uncommon","Target creature you control gains hexproof until end of turn. Remove all -1/-1 counters from it. (A creature with hexproof can't be the target of spells or abilities your opponents control.)",15916,FALSE,"G","Instant","",""
+"Harvest Season",3,NA,NA,"rare","Search your library for up to X basic land cards, where X is the number of tapped creatures you control, put those cards onto the battlefield tapped, then shuffle.",2436,FALSE,"G","Sorcery","",""
+"Haze of Pollen",2,NA,NA,"common","Prevent all combat damage that would be dealt this turn.
+Cycling {3} ({3}, Discard this card: Draw a card.)",13287,FALSE,"G","Instant","","Cycling"
+"Honored Hydra",6,"6","6","rare","Trample
+Embalm {3}{G} ({3}{G}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Snake Hydra with no mana cost. Embalm only as a sorcery.)",17769,FALSE,"G","Creature","Snake;Hydra","Embalm;Trample"
+"Hooded Brawler",3,"3","2","common","You may exert this creature as it attacks. When you do, it gets +2/+2 until end of turn. (An exerted creature won't untap during your next untap step.)",28792,FALSE,"G","Creature","Snake;Warrior","Exert"
+"Initiate's Companion",2,"3","1","common","Whenever this creature deals combat damage to a player, untap target creature or land.",19963,FALSE,"G","Creature","Cat",""
+"Manglehorn",3,"2","2","uncommon","When this creature enters, you may destroy target artifact.
+Artifacts your opponents control enter tapped.",2273,FALSE,"G","Creature","Beast",""
+"Naga Vitalist",2,"1","2","common","{T}: Add one mana of any type that a land you control could produce.",13653,FALSE,"G","Creature","Snake;Druid",""
+"Oashra Cultivator",1,"0","3","common","{2}{G}, {T}, Sacrifice this creature: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",21835,FALSE,"G","Creature","Human;Druid",""
+"Ornery Kudu",3,"3","4","common","When this creature enters, put a -1/-1 counter on target creature you control.",29780,FALSE,"G","Creature","Antelope",""
+"Pouncing Cheetah",3,"3","2","common","Flash",26345,FALSE,"G","Creature","Cat","Flash"
+"Prowling Serpopard",3,"4","3","rare","This spell can't be countered.
+Creature spells you control can't be countered.",3643,FALSE,"G","Creature","Cat;Snake",""
+"Quarry Hauler",4,"4","3","common","When this creature enters, for each kind of counter on target permanent, put another counter of that kind on it or remove one from it.",26358,FALSE,"G","Creature","Camel",""
+"Rhonas the Indomitable",3,"5","5","mythic","Deathtouch, indestructible
+Rhonas can't attack or block unless you control another creature with power 4 or greater.
+{2}{G}: Another target creature gets +2/+0 and gains trample until end of turn.",5203,FALSE,"G","Creature","God","Deathtouch;Indestructible"
+"Sandwurm Convergence",8,NA,NA,"rare","Creatures with flying can't attack you or planeswalkers you control.
+At the beginning of your end step, create a 5/5 green Wurm creature token.",2341,FALSE,"G","Enchantment","",""
+"Scaled Behemoth",6,"6","7","uncommon","Hexproof (This creature can't be the target of spells or abilities your opponents control.)",22837,FALSE,"G","Creature","Crocodile","Hexproof"
+"Shed Weakness",1,NA,NA,"common","Target creature gets +2/+2 until end of turn. You may remove a -1/-1 counter from it.",27194,FALSE,"G","Instant","",""
+"Shefet Monitor",6,"6","5","uncommon","Cycling {3}{G} ({3}{G}, Discard this card: Draw a card.)
+When you cycle this card, you may search your library for a basic land card or a Desert card, put it onto the battlefield, then shuffle. (Do this before you draw.)",13294,FALSE,"G","Creature","Lizard","Cycling"
+"Sixth Sense",1,NA,NA,"uncommon","Enchant creature
+Enchanted creature has ""Whenever this creature deals combat damage to a player, you may draw a card.""",6168,FALSE,"G","Enchantment","Aura","Enchant"
+"Spidery Grasp",3,NA,NA,"common","Untap target creature. It gets +2/+4 and gains reach until end of turn. (It can block creatures with flying.)",22522,TRUE,"G","Instant","",""
+"Stinging Shot",1,NA,NA,"common","Put three -1/-1 counters on target creature with flying.
+Cycling {2} ({2}, Discard this card: Draw a card.)",22442,FALSE,"G","Instant","","Cycling"
+"Synchronized Strike",3,NA,NA,"uncommon","Untap up to two target creatures. They each get +2/+2 until end of turn.",27378,FALSE,"G","Instant","",""
+"Trial of Strength",3,NA,NA,"uncommon","When this enchantment enters, create a 4/2 green Beast creature token.
+When a Cartouche you control enters, return this enchantment to its owner's hand.",28655,FALSE,"G","Enchantment","",""
+"Vizier of the Menagerie",4,"3","4","mythic","You may look at the top card of your library any time.
+You may cast creature spells from the top of your library.
+You can spend mana of any type to cast creature spells.",4264,FALSE,"G","Creature","Snake;Cleric",""
+"Watchful Naga",3,"2","2","uncommon","You may exert this creature as it attacks. When you do, draw a card. (An exerted creature won't untap during your next untap step.)",26134,FALSE,"G","Creature","Snake;Wizard","Exert"
+"Ahn-Crop Champion",4,"4","4","uncommon","You may exert this creature as it attacks. When you do, untap all other creatures you control. (An exerted creature won't untap during your next untap step.)",23998,FALSE,"G;W","Creature","Human;Warrior","Exert"
+"Aven Wind Guide",4,"2","3","uncommon","Flying, vigilance
+Creature tokens you control have flying and vigilance.
+Embalm {4}{W}{U} ({4}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)",9511,FALSE,"U;W","Creature","Bird;Warrior","Embalm;Flying;Vigilance"
+"Bounty of the Luxa",4,NA,NA,"rare","At the beginning of your first main phase, remove all flood counters from this enchantment. If no counters were removed this way, put a flood counter on this enchantment and draw a card. Otherwise, add {C}{G}{U}.",12655,FALSE,"G;U","Enchantment","",""
+"Decimator Beetle",5,"4","5","uncommon","When this creature enters, put a -1/-1 counter on target creature you control.
+Whenever this creature attacks, remove a -1/-1 counter from target creature you control and put a -1/-1 counter on up to one target creature defending player controls.",18452,FALSE,"B;G","Creature","Insect",""
+"Enigma Drake",3,"*","4","uncommon","Flying
+Enigma Drake's power is equal to the number of instant and sorcery cards in your graveyard.",14254,FALSE,"R;U","Creature","Drake","Flying"
+"Hapatra, Vizier of Poisons",2,"2","2","rare","Whenever Hapatra deals combat damage to a player, you may put a -1/-1 counter on target creature.
+Whenever you put one or more -1/-1 counters on a creature, create a 1/1 green Snake creature token with deathtouch.",3908,FALSE,"B;G","Creature","Human;Cleric",""
+"Honored Crop-Captain",2,"3","2","uncommon","Whenever this creature attacks, other attacking creatures get +1/+0 until end of turn.",14986,FALSE,"R;W","Creature","Human;Warrior",""
+"Khenra Charioteer",3,"3","3","uncommon","Trample
+Other creatures you control have trample.",14292,FALSE,"G;R","Creature","Jackal;Warrior","Trample"
+"Merciless Javelineer",4,"4","2","uncommon","{2}, Discard a card: Put a -1/-1 counter on target creature. That creature can't block this turn.",21127,FALSE,"B;R","Creature","Minotaur;Warrior",""
+"Neheb, the Worthy",3,"2","2","rare","First strike
+Other Minotaurs you control have first strike.
+As long as you have one or fewer cards in hand, Minotaurs you control get +2/+0.
+Whenever Neheb deals combat damage to a player, each player discards a card.",16622,FALSE,"B;R","Creature","Minotaur;Warrior","First strike"
+"Nissa, Steward of Elements",2,NA,NA,"mythic","[+2]: Scry 2.
+[0]: Look at the top card of your library. If it's a land card or a creature card with mana value less than or equal to the number of loyalty counters on Nissa, you may put that card onto the battlefield.
+[−6]: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.",6896,FALSE,"G;U","Planeswalker","Nissa","Scry"
+"Samut, Voice of Dissent",5,"3","4","mythic","Flash
+Double strike, vigilance, haste
+Other creatures you control have haste.
+{W}, {T}: Untap another target creature.",6285,FALSE,"G;R","Creature","Human;Warrior","Double strike;Flash;Haste;Vigilance"
+"Shadowstorm Vizier",2,"1","3","uncommon","Flying
+Whenever you cycle or discard a card, this creature gets +1/+1 until end of turn.",25549,FALSE,"B;U","Creature","Human;Cleric","Flying"
+"Temmet, Vizier of Naktamun",2,"2","2","rare","At the beginning of combat on your turn, target creature token you control gets +1/+1 until end of turn and can't be blocked this turn.
+Embalm {3}{W}{U} ({3}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery.)",19521,FALSE,"U;W","Creature","Human;Cleric","Embalm"
+"Wayward Servant",2,"2","2","uncommon","Whenever another Zombie you control enters, each opponent loses 1 life and you gain 1 life.",5038,FALSE,"B;W","Creature","Zombie",""
+"Weaver of Currents",3,"2","2","uncommon","{T}: Add {C}{C}.",18088,FALSE,"G;U","Creature","Snake;Druid",""
+"Dusk // Dawn",9,NA,NA,"rare","Destroy all creatures with power 3 or greater.",950,FALSE,"W","Sorcery","","Aftermath"
+"Dusk // Dawn",9,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Return all creature cards with power 2 or less from your graveyard to your hand.",950,FALSE,"W","Sorcery","","Aftermath"
+"Commit // Memory",10,NA,NA,"rare","Put target spell or nonland permanent into its owner's library second from the top.",3295,FALSE,"U","Instant","","Aftermath"
+"Commit // Memory",10,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Each player shuffles their hand and graveyard into their library, then draws seven cards.",3295,FALSE,"U","Sorcery","","Aftermath"
+"Never // Return",7,NA,NA,"rare","Destroy target creature or planeswalker.",11926,FALSE,"B","Sorcery","","Aftermath"
+"Never // Return",7,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Exile target card from a graveyard. Create a 2/2 black Zombie creature token.",11926,FALSE,"B","Sorcery","","Aftermath"
+"Insult // Injury",6,NA,NA,"rare","Damage can't be prevented this turn. If a source you control would deal damage this turn, it deals double that damage instead.",6093,FALSE,"R","Sorcery","","Aftermath;Double"
+"Insult // Injury",6,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Injury deals 2 damage to target creature and 2 damage to target player or planeswalker.",6093,FALSE,"R","Sorcery","","Aftermath;Double"
+"Mouth // Feed",7,NA,NA,"rare","Create a 3/3 green Hippo creature token.",15438,FALSE,"G","Sorcery","","Aftermath"
+"Mouth // Feed",7,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Draw a card for each creature you control with power 3 or greater.",15438,FALSE,"G","Sorcery","","Aftermath"
+"Start // Finish",6,NA,NA,"uncommon","Create two 1/1 white Warrior creature tokens with vigilance.",23832,FALSE,"W","Instant","","Aftermath"
+"Start // Finish",6,NA,NA,"uncommon","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+As an additional cost to cast this spell, sacrifice a creature.
+Destroy target creature.",23832,FALSE,"B","Sorcery","","Aftermath"
+"Reduce // Rubble",6,NA,NA,"uncommon","Counter target spell unless its controller pays {3}.",24070,FALSE,"U","Instant","","Aftermath"
+"Reduce // Rubble",6,NA,NA,"uncommon","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Up to three target lands don't untap during their controller's next untap step.",24070,FALSE,"R","Sorcery","","Aftermath"
+"Destined // Lead",6,NA,NA,"uncommon","Target creature gets +1/+0 and gains indestructible until end of turn.",19230,FALSE,"B","Instant","","Aftermath"
+"Destined // Lead",6,NA,NA,"uncommon","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+All creatures able to block target creature this turn do so.",19230,FALSE,"G","Sorcery","","Aftermath"
+"Onward // Victory",6,NA,NA,"uncommon","Target creature gets +X/+0 until end of turn, where X is its power.",21177,FALSE,"R","Instant","","Aftermath"
+"Onward // Victory",6,NA,NA,"uncommon","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Target creature gains double strike until end of turn.",21177,FALSE,"W","Sorcery","","Aftermath"
+"Spring // Mind",9,NA,NA,"uncommon","Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",15816,FALSE,"G","Sorcery","","Aftermath"
+"Spring // Mind",9,NA,NA,"uncommon","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Draw two cards.",15816,FALSE,"U","Instant","","Aftermath"
+"Prepare // Fight",6,NA,NA,"rare","Untap target creature. It gets +2/+2 and gains lifelink until end of turn.",22008,FALSE,"W","Instant","","Aftermath;Fight"
+"Prepare // Fight",6,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Target creature you control fights target creature an opponent controls.",22008,FALSE,"G","Sorcery","","Aftermath;Fight"
+"Failure // Comply",3,NA,NA,"rare","Return target spell to its owner's hand.",21726,FALSE,"U","Instant","","Aftermath"
+"Failure // Comply",3,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Choose a card name. Until your next turn, your opponents can't cast spells with the chosen name.",21726,FALSE,"W","Sorcery","","Aftermath"
+"Rags // Riches",11,NA,NA,"rare","All creatures get -2/-2 until end of turn.",15012,FALSE,"B","Sorcery","","Aftermath"
+"Rags // Riches",11,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Each opponent chooses a creature they control. You gain control of those creatures.",15012,FALSE,"U","Sorcery","","Aftermath"
+"Cut // Ribbons",4,NA,NA,"rare","Cut deals 4 damage to target creature.",8543,FALSE,"R","Sorcery","","Aftermath"
+"Cut // Ribbons",4,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Each opponent loses X life.",8543,FALSE,"B","Sorcery","","Aftermath"
+"Heaven // Earth",3,NA,NA,"rare","Heaven deals X damage to each creature with flying.",14771,FALSE,"G","Instant","","Aftermath"
+"Heaven // Earth",3,NA,NA,"rare","Aftermath (Cast this spell only from your graveyard. Then exile it.)
+Earth deals X damage to each creature without flying.",14771,FALSE,"R","Sorcery","","Aftermath"
+"Bontu's Monument",3,NA,NA,"uncommon","Black creature spells you cast cost {1} less to cast.
+Whenever you cast a creature spell, each opponent loses 1 life and you gain 1 life.",678,FALSE,"","Artifact","",""
+"Edifice of Authority",3,NA,NA,"uncommon","{1}, {T}: Target creature can't attack this turn. Put a brick counter on this artifact.
+{1}, {T}: Until your next turn, target creature can't attack or block and its activated abilities can't be activated. Activate only if there are three or more brick counters on this artifact.",22648,FALSE,"","Artifact","",""
+"Embalmer's Tools",2,NA,NA,"uncommon","Activated abilities of creature cards in your graveyard cost {1} less to activate.
+Tap an untapped Zombie you control: Target player mills a card.",12947,FALSE,"","Artifact","","Mill"
+"Gate to the Afterlife",3,NA,NA,"uncommon","Whenever a nontoken creature you control dies, you gain 1 life. Then you may draw a card. If you do, discard a card.
+{2}, {T}, Sacrifice this artifact: Search your graveyard, hand, and/or library for a card named God-Pharaoh's Gift and put it onto the battlefield. If you search your library this way, shuffle. Activate only if there are six or more creature cards in your graveyard.",11314,FALSE,"","Artifact","",""
+"Hazoret's Monument",3,NA,NA,"uncommon","Red creature spells you cast cost {1} less to cast.
+Whenever you cast a creature spell, you may discard a card. If you do, draw a card.",1923,FALSE,"","Artifact","",""
+"Honed Khopesh",1,NA,NA,"common","Equipped creature gets +1/+1.
+Equip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",21615,FALSE,"","Artifact","Equipment","Equip"
+"Kefnet's Monument",3,NA,NA,"uncommon","Blue creature spells you cast cost {1} less to cast.
+Whenever you cast a creature spell, target creature an opponent controls doesn't untap during its controller's next untap step.",5103,FALSE,"","Artifact","",""
+"Luxa River Shrine",3,NA,NA,"common","{1}, {T}: You gain 1 life. Put a brick counter on this artifact.
+{T}: You gain 2 life. Activate only if there are three or more brick counters on this artifact.",21416,FALSE,"","Artifact","",""
+"Oketra's Monument",3,NA,NA,"uncommon","White creature spells you cast cost {1} less to cast.
+Whenever you cast a creature spell, create a 1/1 white Warrior creature token with vigilance.",1039,FALSE,"","Artifact","",""
+"Oracle's Vault",4,NA,NA,"rare","{2}, {T}: Exile the top card of your library. Until end of turn, you may play that card. Put a brick counter on this artifact.
+{T}: Exile the top card of your library. Until end of turn, you may play that card without paying its mana cost. Activate only if there are three or more brick counters on this artifact.",13133,FALSE,"","Artifact","",""
+"Pyramid of the Pantheon",1,NA,NA,"rare","{2}, {T}: Add one mana of any color. Put a brick counter on this artifact.
+{T}: Add three mana of any one color. Activate only if there are three or more brick counters on this artifact.",13568,FALSE,"","Artifact","",""
+"Rhonas's Monument",3,NA,NA,"uncommon","Green creature spells you cast cost {1} less to cast.
+Whenever you cast a creature spell, target creature you control gets +2/+2 and gains trample until end of turn.",2149,FALSE,"","Artifact","",""
+"Throne of the God-Pharaoh",2,NA,NA,"rare","At the beginning of your end step, each opponent loses life equal to the number of tapped creatures you control.",2635,FALSE,"","Artifact","",""
+"Watchers of the Dead",2,"2","2","uncommon","Exile this creature: Each opponent chooses two cards in their graveyard and exiles the rest.",21909,FALSE,"","Artifact;Creature","Cat",""
+"Canyon Slough",0,NA,NA,"rare","({T}: Add {B} or {R}.)
+This land enters tapped.
+Cycling {2} ({2}, Discard this card: Draw a card.)",684,FALSE,"","Land","Swamp;Mountain","Cycling"
+"Cascading Cataracts",0,NA,NA,"rare","Indestructible
+{T}: Add {C}.
+{5}, {T}: Add five mana in any combination of colors.",1220,FALSE,"","Land","","Indestructible"
+"Cradle of the Accursed",0,NA,NA,"common","{T}: Add {C}.
+{3}, {T}, Sacrifice this land: Create a 2/2 black Zombie creature token. Activate only as a sorcery.",9143,FALSE,"","Land","Desert",""
+"Evolving Wilds",0,NA,NA,"common","{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",19,TRUE,"","Land","",""
+"Fetid Pools",0,NA,NA,"rare","({T}: Add {U} or {B}.)
+This land enters tapped.
+Cycling {2} ({2}, Discard this card: Draw a card.)",850,FALSE,"","Land","Island;Swamp","Cycling"
+"Grasping Dunes",0,NA,NA,"uncommon","{T}: Add {C}.
+{1}, {T}, Sacrifice this land: Put a -1/-1 counter on target creature. Activate only as a sorcery.",7857,FALSE,"","Land","Desert",""
+"Irrigated Farmland",0,NA,NA,"rare","({T}: Add {W} or {U}.)
+This land enters tapped.
+Cycling {2} ({2}, Discard this card: Draw a card.)",815,FALSE,"","Land","Plains;Island","Cycling"
+"Painted Bluffs",0,NA,NA,"common","{T}: Add {C}.
+{1}, {T}: Add one mana of any color.",7127,FALSE,"","Land","Desert",""
+"Scattered Groves",0,NA,NA,"rare","({T}: Add {G} or {W}.)
+This land enters tapped.
+Cycling {2} ({2}, Discard this card: Draw a card.)",1024,FALSE,"","Land","Forest;Plains","Cycling"
+"Sheltered Thicket",0,NA,NA,"rare","({T}: Add {R} or {G}.)
+This land enters tapped.
+Cycling {2} ({2}, Discard this card: Draw a card.)",652,FALSE,"","Land","Mountain;Forest","Cycling"
+"Sunscorched Desert",0,NA,NA,"common","When this land enters, it deals 1 damage to target player or planeswalker.
+{T}: Add {C}.",3301,FALSE,"","Land","Desert",""
+"Plains",0,NA,NA,"common","({T}: Add {W}.)",NA,TRUE,"","Land","Plains",""
+"Island",0,NA,NA,"common","({T}: Add {U}.)",NA,TRUE,"","Land","Island",""
+"Swamp",0,NA,NA,"common","({T}: Add {B}.)",NA,TRUE,"","Land","Swamp",""
+"Mountain",0,NA,NA,"common","({T}: Add {R}.)",NA,TRUE,"","Land","Mountain",""
+"Forest",0,NA,NA,"common","({T}: Add {G}.)",NA,TRUE,"","Land","Forest",""
+"Plains",0,NA,NA,"common","({T}: Add {W}.)",NA,TRUE,"","Land","Plains",""
+"Plains",0,NA,NA,"common","({T}: Add {W}.)",NA,TRUE,"","Land","Plains",""
+"Plains",0,NA,NA,"common","({T}: Add {W}.)",NA,TRUE,"","Land","Plains",""
+"Island",0,NA,NA,"common","({T}: Add {U}.)",NA,TRUE,"","Land","Island",""
+"Island",0,NA,NA,"common","({T}: Add {U}.)",NA,TRUE,"","Land","Island",""
+"Island",0,NA,NA,"common","({T}: Add {U}.)",NA,TRUE,"","Land","Island",""
+"Swamp",0,NA,NA,"common","({T}: Add {B}.)",NA,TRUE,"","Land","Swamp",""
+"Swamp",0,NA,NA,"common","({T}: Add {B}.)",NA,TRUE,"","Land","Swamp",""
+"Swamp",0,NA,NA,"common","({T}: Add {B}.)",NA,TRUE,"","Land","Swamp",""
+"Mountain",0,NA,NA,"common","({T}: Add {R}.)",NA,TRUE,"","Land","Mountain",""
+"Mountain",0,NA,NA,"common","({T}: Add {R}.)",NA,TRUE,"","Land","Mountain",""
+"Mountain",0,NA,NA,"common","({T}: Add {R}.)",NA,TRUE,"","Land","Mountain",""
+"Forest",0,NA,NA,"common","({T}: Add {G}.)",NA,TRUE,"","Land","Forest",""
+"Forest",0,NA,NA,"common","({T}: Add {G}.)",NA,TRUE,"","Land","Forest",""
+"Forest",0,NA,NA,"common","({T}: Add {G}.)",NA,TRUE,"","Land","Forest",""
+"Gideon, Martial Paragon",5,NA,NA,"mythic","[+2]: Untap all creatures you control. Those creatures get +1/+1 until end of turn.
+[0]: Until end of turn, Gideon becomes a 5/5 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.
+[−10]: Creatures you control get +2/+2 until end of turn. Tap all creatures your opponents control.",16572,FALSE,"W","Planeswalker","Gideon",""
+"Companion of the Trials",3,"2","2","uncommon","Flying
+{1}{W}: Untap target creature. Activate only if you control a Gideon planeswalker.",29351,FALSE,"W","Creature","Bird;Soldier","Flying"
+"Gideon's Resolve",5,NA,NA,"rare","When this enchantment enters, you may search your library and/or graveyard for a card named Gideon, Martial Paragon, reveal it, and put it into your hand. If you search your library this way, shuffle.
+Creatures you control get +1/+1.",24527,FALSE,"W","Enchantment","",""
+"Graceful Cat",3,"2","2","common","Whenever this creature attacks, it gets +1/+1 until end of turn.",25475,FALSE,"W","Creature","Cat",""
+"Stone Quarry",0,NA,NA,"common","This land enters tapped.
+{T}: Add {R} or {W}.",5792,TRUE,"","Land","",""
+"Liliana, Death Wielder",7,NA,NA,"mythic","[+2]: Put a -1/-1 counter on up to one target creature.
+[−3]: Destroy target creature with a -1/-1 counter on it.
+[−10]: Return all creature cards from your graveyard to the battlefield.",7946,FALSE,"B","Planeswalker","Liliana",""
+"Desiccated Naga",3,"3","2","uncommon","{3}{B}: Target opponent loses 2 life and you gain 2 life. Activate only if you control a Liliana planeswalker.",28263,FALSE,"B","Creature","Zombie;Snake",""
+"Liliana's Influence",6,NA,NA,"rare","Put a -1/-1 counter on each creature you don't control. You may search your library and/or graveyard for a card named Liliana, Death Wielder, reveal it, and put it into your hand. If you search your library this way, shuffle.",14689,FALSE,"B","Sorcery","",""
+"Tattered Mummy",2,"1","2","common","When this creature dies, each opponent loses 2 life.",14564,FALSE,"B","Creature","Zombie;Jackal",""
+"Foul Orchard",0,NA,NA,"common","This land enters tapped.
+{T}: Add {B} or {G}.",5415,TRUE,"","Land","",""
+"Cinder Barrens",0,NA,NA,"common","This land enters tapped.
+{T}: Add {B} or {R}.",6273,TRUE,"","Land","",""
+"Forsaken Sanctuary",0,NA,NA,"common","This land enters tapped.
+{T}: Add {W} or {B}.",6500,TRUE,"","Land","",""
+"Highland Lake",0,NA,NA,"common","This land enters tapped.
+{T}: Add {U} or {R}.",6469,TRUE,"","Land","",""
+"Meandering River",0,NA,NA,"common","This land enters tapped.
+{T}: Add {W} or {U}.",7560,TRUE,"","Land","",""
+"Submerged Boneyard",0,NA,NA,"common","This land enters tapped.
+{T}: Add {U} or {B}.",5197,TRUE,"","Land","",""
+"Timber Gorge",0,NA,NA,"common","This land enters tapped.
+{T}: Add {R} or {G}.",8933,TRUE,"","Land","",""
+"Tranquil Expanse",0,NA,NA,"common","This land enters tapped.
+{T}: Add {G} or {W}.",8133,TRUE,"","Land","",""
+"Woodland Stream",0,NA,NA,"common","This land enters tapped.
+{T}: Add {G} or {U}.",5331,TRUE,"","Land","",""
