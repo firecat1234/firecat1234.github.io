@@ -80,4 +80,4 @@ The project's `execute-dir: project` setting handles this during rendering; an i
 
 ## Validation status
 
-Both code execution posts have rendered successfully in the working checkout. These draft instructions still need to be followed from a fresh clone before submission.
+The full site, including both code execution posts, has rendered successfully in the working checkout. These instructions still need to be followed from a fresh clone before submission.

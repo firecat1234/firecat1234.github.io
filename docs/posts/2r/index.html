@@ -223,6 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>As an example of what can be done with R inside of a Quarto website, I’ll be accessing, working with, and analyzing freely licensed data from Amonkhet, one of my favourite Magic the Gathering sets. To start, make sure you have the data, and load it into R:</p>
+<p>Data: <a href="https://mtgjson.com/api/v5/AKH.json">MTGJSON’s Amonkhet dataset</a>, using the saved snapshot dated September 22, 2026, published under the <a href="https://mtgjson.com/license/">MIT licence</a>. The <a href="https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#build-from-a-fresh-clone">project README</a> covers setup, rendering, and running cells interactively. The download chunk below is skipped during rendering; see the <a href="https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#optional-download-and-csv-regeneration">manual download instructions</a>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#one time download </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#run manually from the repository root, normal renders use saved file</span></span>
@@ -231,9 +232,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data_file <span class="ot">&lt;-</span> <span class="st">"data/AKH.json"</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(data_file)) {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">download.file</span>(data_url, data_file, <span class="at">mode =</span> <span class="st">"wb"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="st">"data"</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)} <span class="cf">else</span> {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using the existing snapshot: "</span>, data_file)}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="st">"data"</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">download.file</span>(data_url, data_file, <span class="at">mode =</span> <span class="st">"wb"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using the existing snapshot: "</span>, data_file)}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#read file </span></span>
@@ -3754,6 +3756,7 @@ Figure&nbsp;2: The ten highest creature stat-efficiency scores in the retained A
 </div>
 </div>
 </div>
+<p>Green has the highest stats-per-cost, which fits their identity of being creature-based. Among single-colour groups, black is second, with white being the least efficient. Looking at individual cards, green still has the top spot, with Exemplar of Strength. This is a little misleading, though: it gives one of your creatures -3/-3 when you play it, meaning it’s actually closer to a 1/1 for 2 than a 4/4. Second place, Bloodrage Brawler, costs a card. Third place, Channeler Initiate, and seventh, Defiant Greatmaw, also make another creature smaller in exchange. The next 3 are mythic rare cards with conditions on whether they can be used in combat. This may not be a great measure of how good a card is because of the added complexity, but we do see one interesting standout here: Dread Wanderer is cheap and efficient, has a very slight downside and is replayable once it dies. It ended up being second among AKH cards by copies in the article’s Pro Tour Amonkhet Day Two table. This doesn’t validate the efficiency measure as a whole, as other sets are included in that environment, and other features such as the aforementioned abilities or its type (Zombie) could be more impactful on the performance.</p>
 </section>
 </section>
 <section id="a-little-tournament-context" class="level2">

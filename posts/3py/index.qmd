@@ -9,15 +9,9 @@ execute:
   echo: true
 ---
 
-In [the R post](../2r/index.qmd), I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular in Commander years after the set's release?
+In [the R post](../2r/index.qmd), I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular years after the set's release?
 
-Data: [MTGJSON's Amonkhet dataset](https://mtgjson.com/api/v5/AKH.json), using the saved snapshot dated September 22, 2026, and the CSV prepared in the R post. MTGJSON publishes its data under the [MIT licence](https://mtgjson.com/license/).
-
-To reproduce the analysis, follow the [project README](https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#build-from-a-fresh-clone) for setup, rendering, and running cells interactively. The [data notes](https://github.com/firecat1234/firecat1234.github.io/blob/main/data/README.md) explain the CSV format.
-
-The dataset's [EDHREC rank](https://mtgjson.com/data-models/card/card-set/#edhrecrank) gives us a rough way to explore staying power. Lower ranks mean greater popularity. This is popularity in the saved snapshot, rather than a record of how each card's popularity changed over time, and it does not measure tournament success.
-
-All three comparisons exclude cards marked as reprints in the AKH snapshot, using MTGJSON's [isReprint field](https://mtgjson.com/data-models/card/card-set/#isreprint). This keeps older cards such as Evolving Wilds out of the analysis. Cards introduced in Amonkhet can still have been printed again later.
+The dataset's [EDHREC rank](https://mtgjson.com/data-models/card/card-set/#edhrecrank) gives us a rough way to explore staying power. Lower ranks mean greater popularity. This is popularity in the saved snapshot, rather than a record of how each card's popularity changed over time, and it does not measure tournament success. All three comparisons exclude cards marked as reprints in the AKH snapshot, using MTGJSON's [isReprint field](https://mtgjson.com/data-models/card/card-set/#isreprint). This keeps older cards such as Evolving Wilds out of the analysis.
 
 ## Read and prepare the cards
 
@@ -26,6 +20,8 @@ All three comparisons exclude cards marked as reprints in the AKH snapshot, usin
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from math import log10
+from statistics import linear_regression
 
 raw_cards = pd.read_csv("data/akh_cards.csv", dtype={"isReprint": "boolean"})
 raw_cards = raw_cards.loc[~raw_cards["isReprint"]].copy()
@@ -54,7 +50,7 @@ cards[["name", "rarity", "word_count", "edhrecRank"]].head()
 
 ## How much fine print comes with each rarity?
 
-First, I compare average text length by rarity. The word count uses whitespace to split the text, so it includes reminder text and any standalone mana symbols. It is a simple length measure, not a direct measure of how difficult a card is to play.
+First, I compare average text length by rarity. The word count uses whitespace to split the text, so it includes reminder text and any standalone mana symbols. It is a simple length measure, not a direct measure of how difficult a card is to play. There is a very clear pattern: mean text length increases with rarity.
 
 ```{python}
 #| label: fig-text-length-by-rarity
@@ -74,38 +70,48 @@ plt.show()
 
 ## Does longer text go with greater popularity?
 
-For this comparison, I use only cards with a recorded positive EDHREC rank. The vertical axis uses a logarithmic scale so that ranks across a wide range remain readable. Spearman's correlation compares the ordering of the two variables: a negative value would mean longer text tends to go with a lower rank, and therefore greater popularity. An association would not establish that longer text causes popularity.
+For this comparison, I use only cards with a recorded positive EDHREC rank. The vertical axis uses a logarithmic scale so that ranks across a wide range remain readable. Spearman's correlation compares the ordering of the two variables: a negative value would mean longer text tends to go with a lower rank, and therefore greater popularity. An association would not establish that longer text causes popularity. That said: there is a low correlation between how wordy a card is and how popular it is now, at ρ = −0.09, so little monotonic association.
 
 ```{python}
 #| label: fig-text-length-edhrec
-#| fig-cap: "Rules-text word count versus EDHREC rank for AKH cards not marked as reprints. Lower ranks mean greater popularity; the rank axis is logarithmic."
+#| fig-cap: "Rules-text word count versus EDHREC rank for AKH cards not marked as reprints. Lower ranks mean greater popularity; the rank axis is logarithmic. The dashed line is a least-squares fit to log10(rank), separate from the Spearman correlation in the title."
 
 # Pearson correlation of the ranks gives Spearman's correlation.
 # rank() assigns average ranks to ties, so no extra package is needed.
 rho = ranked_cards["word_count"].rank().corr(ranked_cards["edhrecRank"].rank())
+
+# Fit in log-rank space to match the vertical axis.
+log_ranks = [log10(rank) for rank in ranked_cards["edhrecRank"]]
+slope, intercept = linear_regression(ranked_cards["word_count"].tolist(), log_ranks)
+trend_x = [min(ranked_cards["word_count"]), max(ranked_cards["word_count"])]
+trend_y = [10 ** (intercept + slope * words) for words in trend_x]
 
 fig, ax = plt.subplots(figsize=(8, 5))
 ax.scatter(
     ranked_cards["word_count"], ranked_cards["edhrecRank"],
     color="#720e9d", alpha=0.6, s=25
 )
+ax.plot(trend_x, trend_y, color="#D86735", linestyle="--",
+        label="Linear fit to log10(rank)")
 ax.set_yscale("log")
 ax.set_xlabel("Rules-text word count")
 ax.set_ylabel("EDHREC rank (lower is more popular; log scale)")
 ax.set_title(f"Spearman correlation: {rho:.2f} (n = {len(ranked_cards)})")
+ax.legend()
 fig.tight_layout()
 plt.show()
 ```
 
 ## Which cards have stuck around?
 
-Finally, these are the ten AKH cards with the lowest EDHREC ranks after excluding reprints. Bar height shows rules-text word count, and each card's label includes its EDHREC rank. The cards are ordered by popularity from left to right, with lower ranks meaning greater popularity.
+Finally, these are the ten AKH cards with the lowest EDHREC ranks (i.e., most popular) after excluding reprints. Bar height shows rules-text word count, and each card's label includes its EDHREC rank. The cards are ordered by popularity from left to right, with lower ranks meaning greater popularity.
 
 ```{python}
 #| label: fig-top-ten-edhrec
-#| fig-cap: "Rules-text length of the ten most popular AKH cards not marked as reprints. Bars show word counts; the x-axis labels give each card's EDHREC rank."
+#| fig-cap: "Rules-text length of the ten most popular AKH cards not marked as reprints. Bars show word counts; the x-axis labels give each card's EDHREC rank. The dashed line shows the mean word count of these ten cards."
 
 top_cards = ranked_cards.sort_values(["edhrecRank", "name"]).head(10)
+top_mean_words = top_cards["word_count"].mean()
 card_labels = [
     f"{name}\nEDHREC #{rank:,.0f}"
     for name, rank in zip(top_cards["name"], top_cards["edhrecRank"])
@@ -113,13 +119,22 @@ card_labels = [
 
 fig, ax = plt.subplots(figsize=(11, 6))
 bars = ax.bar(card_labels, top_cards["word_count"], color="#720e9d", edgecolor="0.25")
+ax.axhline(top_mean_words, color="#D86735", linestyle="--",
+           label=f"Top-ten mean: {top_mean_words:.1f} words")
 ax.bar_label(bars, padding=3)
 ax.margins(y=0.15)
 ax.set_xlabel("Card, ordered by EDHREC rank (lower is more popular)")
 ax.set_ylabel("Rules-text word count")
+ax.legend(loc="upper left")
 plt.setp(ax.get_xticklabels(), rotation=45, ha="right")
 fig.tight_layout()
 plt.show()
 ```
+
+------------------------
+
+Data: [MTGJSON's Amonkhet dataset](https://mtgjson.com/api/v5/AKH.json), using the saved snapshot dated September 22, 2026, and the CSV prepared in the R post. MTGJSON publishes its data under the [MIT licence](https://mtgjson.com/license/).
+
+To reproduce the analysis, follow the [project README](https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#build-from-a-fresh-clone) for setup, rendering, and running cells interactively. The [data notes](https://github.com/firecat1234/firecat1234.github.io/blob/main/data/README.md) explain the CSV format.
 
 *AI assistance: ChatGPT helped draft the data preparation and plotting code.*

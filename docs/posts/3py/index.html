@@ -219,19 +219,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In <a href="../../posts/2r/index.html">the R post</a>, I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular in Commander years after the set’s release?</p>
-<p>Data: <a href="https://mtgjson.com/api/v5/AKH.json">MTGJSON’s Amonkhet dataset</a>, using the saved snapshot dated September 22, 2026, and the CSV prepared in the R post. MTGJSON publishes its data under the <a href="https://mtgjson.com/license/">MIT licence</a>.</p>
-<p>The dataset’s <a href="https://mtgjson.com/data-models/card/card-set/#edhrecrank">EDHREC rank</a> gives us a rough way to explore staying power. Lower ranks mean greater popularity. This is popularity in the saved snapshot, rather than a record of how each card’s popularity changed over time, and it does not measure tournament success.</p>
-<p>All three comparisons exclude cards marked as reprints in the AKH snapshot, using MTGJSON’s <a href="https://mtgjson.com/data-models/card/card-set/#isreprint">isReprint field</a>. This keeps older cards such as Evolving Wilds out of the analysis. Cards introduced in Amonkhet can still have been printed again later.</p>
+<p>In <a href="../../posts/2r/index.html">the R post</a>, I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular years after the set’s release?</p>
+<p>The dataset’s <a href="https://mtgjson.com/data-models/card/card-set/#edhrecrank">EDHREC rank</a> gives us a rough way to explore staying power. Lower ranks mean greater popularity. This is popularity in the saved snapshot, rather than a record of how each card’s popularity changed over time, and it does not measure tournament success. All three comparisons exclude cards marked as reprints in the AKH snapshot, using MTGJSON’s <a href="https://mtgjson.com/data-models/card/card-set/#isreprint">isReprint field</a>. This keeps older cards such as Evolving Wilds out of the analysis.</p>
 <section id="read-and-prepare-the-cards" class="level2">
 <h2 class="anchored" data-anchor-id="read-and-prepare-the-cards">Read and prepare the cards</h2>
 <div id="read-akh-csv" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>raw_cards <span class="op">=</span> pd.read_csv(<span class="st">"data/akh_cards.csv"</span>, dtype<span class="op">=</span>{<span class="st">"isReprint"</span>: <span class="st">"boolean"</span>})</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>raw_cards <span class="op">=</span> raw_cards.loc[<span class="op">~</span>raw_cards[<span class="st">"isReprint"</span>]].copy()</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Loaded </span><span class="sc">{</span><span class="bu">len</span>(raw_cards)<span class="sc">}</span><span class="ss"> non-reprint rows from the CSV."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log10</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statistics <span class="im">import</span> linear_regression</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>raw_cards <span class="op">=</span> pd.read_csv(<span class="st">"data/akh_cards.csv"</span>, dtype<span class="op">=</span>{<span class="st">"isReprint"</span>: <span class="st">"boolean"</span>})</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>raw_cards <span class="op">=</span> raw_cards.loc[<span class="op">~</span>raw_cards[<span class="st">"isReprint"</span>]].copy()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Loaded </span><span class="sc">{</span><span class="bu">len</span>(raw_cards)<span class="sc">}</span><span class="ss"> non-reprint rows from the CSV."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Loaded 256 non-reprint rows from the CSV.</code></pre>
 </div>
@@ -310,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="how-much-fine-print-comes-with-each-rarity" class="level2">
 <h2 class="anchored" data-anchor-id="how-much-fine-print-comes-with-each-rarity">How much fine print comes with each rarity?</h2>
-<p>First, I compare average text length by rarity. The word count uses whitespace to split the text, so it includes reminder text and any standalone mana symbols. It is a simple length measure, not a direct measure of how difficult a card is to play.</p>
+<p>First, I compare average text length by rarity. The word count uses whitespace to split the text, so it includes reminder text and any standalone mana symbols. It is a simple length measure, not a direct measure of how difficult a card is to play. There is a very clear pattern: mean text length increases with rarity.</p>
 <div id="cell-fig-text-length-by-rarity" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rarity_order <span class="op">=</span> [<span class="st">"common"</span>, <span class="st">"uncommon"</span>, <span class="st">"rare"</span>, <span class="st">"mythic"</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>rarity_colours <span class="op">=</span> [<span class="st">"#8F9397"</span>, <span class="st">"#AABAC2"</span>, <span class="st">"#C3A14A"</span>, <span class="st">"#D86735"</span>]</span>
@@ -338,23 +338,32 @@ Figure&nbsp;1: Mean rules-text word count by rarity for AKH cards not marked as 
 </section>
 <section id="does-longer-text-go-with-greater-popularity" class="level2">
 <h2 class="anchored" data-anchor-id="does-longer-text-go-with-greater-popularity">Does longer text go with greater popularity?</h2>
-<p>For this comparison, I use only cards with a recorded positive EDHREC rank. The vertical axis uses a logarithmic scale so that ranks across a wide range remain readable. Spearman’s correlation compares the ordering of the two variables: a negative value would mean longer text tends to go with a lower rank, and therefore greater popularity. An association would not establish that longer text causes popularity.</p>
+<p>For this comparison, I use only cards with a recorded positive EDHREC rank. The vertical axis uses a logarithmic scale so that ranks across a wide range remain readable. Spearman’s correlation compares the ordering of the two variables: a negative value would mean longer text tends to go with a lower rank, and therefore greater popularity. An association would not establish that longer text causes popularity. That said: there is a low correlation between how wordy a card is and how popular it is now, at ρ = −0.09, so little monotonic association.</p>
 <div id="cell-fig-text-length-edhrec" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pearson correlation of the ranks gives Spearman's correlation.</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># rank() assigns average ranks to ties, so no extra package is needed.</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> ranked_cards[<span class="st">"word_count"</span>].rank().corr(ranked_cards[<span class="st">"edhrecRank"</span>].rank())</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    ranked_cards[<span class="st">"word_count"</span>], ranked_cards[<span class="st">"edhrecRank"</span>],</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"#720e9d"</span>, alpha<span class="op">=</span><span class="fl">0.6</span>, s<span class="op">=</span><span class="dv">25</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Rules-text word count"</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"EDHREC rank (lower is more popular; log scale)"</span>)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="ss">f"Spearman correlation: </span><span class="sc">{</span>rho<span class="sc">:.2f}</span><span class="ss"> (n = </span><span class="sc">{</span><span class="bu">len</span>(ranked_cards)<span class="sc">}</span><span class="ss">)"</span>)</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit in log-rank space to match the vertical axis.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>log_ranks <span class="op">=</span> [log10(rank) <span class="cf">for</span> rank <span class="kw">in</span> ranked_cards[<span class="st">"edhrecRank"</span>]]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>slope, intercept <span class="op">=</span> linear_regression(ranked_cards[<span class="st">"word_count"</span>].tolist(), log_ranks)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>trend_x <span class="op">=</span> [<span class="bu">min</span>(ranked_cards[<span class="st">"word_count"</span>]), <span class="bu">max</span>(ranked_cards[<span class="st">"word_count"</span>])]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>trend_y <span class="op">=</span> [<span class="dv">10</span> <span class="op">**</span> (intercept <span class="op">+</span> slope <span class="op">*</span> words) <span class="cf">for</span> words <span class="kw">in</span> trend_x]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>ax.scatter(</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    ranked_cards[<span class="st">"word_count"</span>], ranked_cards[<span class="st">"edhrecRank"</span>],</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"#720e9d"</span>, alpha<span class="op">=</span><span class="fl">0.6</span>, s<span class="op">=</span><span class="dv">25</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>ax.plot(trend_x, trend_y, color<span class="op">=</span><span class="st">"#D86735"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">"Linear fit to log10(rank)"</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Rules-text word count"</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"EDHREC rank (lower is more popular; log scale)"</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="ss">f"Spearman correlation: </span><span class="sc">{</span>rho<span class="sc">:.2f}</span><span class="ss"> (n = </span><span class="sc">{</span><span class="bu">len</span>(ranked_cards)<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-text-length-edhrec" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -362,7 +371,7 @@ Figure&nbsp;1: Mean rules-text word count by rarity for AKH cards not marked as 
 <img src="index_files/figure-html/fig-text-length-edhrec-output-1.png" width="757" height="470" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-text-length-edhrec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Rules-text word count versus EDHREC rank for AKH cards not marked as reprints. Lower ranks mean greater popularity; the rank axis is logarithmic.
+Figure&nbsp;2: Rules-text word count versus EDHREC rank for AKH cards not marked as reprints. Lower ranks mean greater popularity; the rank axis is logarithmic. The dashed line is a least-squares fit to log10(rank), separate from the Spearman correlation in the title.
 </figcaption>
 </figure>
 </div>
@@ -371,23 +380,27 @@ Figure&nbsp;2: Rules-text word count versus EDHREC rank for AKH cards not marked
 </section>
 <section id="which-cards-have-stuck-around" class="level2">
 <h2 class="anchored" data-anchor-id="which-cards-have-stuck-around">Which cards have stuck around?</h2>
-<p>Finally, these are the ten AKH cards with the lowest EDHREC ranks after excluding reprints. Bar height shows rules-text word count, and each card’s label includes its EDHREC rank. The cards are ordered by popularity from left to right, with lower ranks meaning greater popularity.</p>
+<p>Finally, these are the ten AKH cards with the lowest EDHREC ranks (i.e., most popular) after excluding reprints. Bar height shows rules-text word count, and each card’s label includes its EDHREC rank. The cards are ordered by popularity from left to right, with lower ranks meaning greater popularity.</p>
 <div id="cell-fig-top-ten-edhrec" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>top_cards <span class="op">=</span> ranked_cards.sort_values([<span class="st">"edhrecRank"</span>, <span class="st">"name"</span>]).head(<span class="dv">10</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>card_labels <span class="op">=</span> [</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ch">\n</span><span class="ss">EDHREC #</span><span class="sc">{</span>rank<span class="sc">:,.0f}</span><span class="ss">"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, rank <span class="kw">in</span> <span class="bu">zip</span>(top_cards[<span class="st">"name"</span>], top_cards[<span class="st">"edhrecRank"</span>])</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="dv">6</span>))</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> ax.bar(card_labels, top_cards[<span class="st">"word_count"</span>], color<span class="op">=</span><span class="st">"#720e9d"</span>, edgecolor<span class="op">=</span><span class="st">"0.25"</span>)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>ax.bar_label(bars, padding<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>ax.margins(y<span class="op">=</span><span class="fl">0.15</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Card, ordered by EDHREC rank (lower is more popular)"</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Rules-text word count"</span>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.setp(ax.get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">"right"</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>top_mean_words <span class="op">=</span> top_cards[<span class="st">"word_count"</span>].mean()</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>card_labels <span class="op">=</span> [</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ch">\n</span><span class="ss">EDHREC #</span><span class="sc">{</span>rank<span class="sc">:,.0f}</span><span class="ss">"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, rank <span class="kw">in</span> <span class="bu">zip</span>(top_cards[<span class="st">"name"</span>], top_cards[<span class="st">"edhrecRank"</span>])</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="dv">6</span>))</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> ax.bar(card_labels, top_cards[<span class="st">"word_count"</span>], color<span class="op">=</span><span class="st">"#720e9d"</span>, edgecolor<span class="op">=</span><span class="st">"0.25"</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>ax.axhline(top_mean_words, color<span class="op">=</span><span class="st">"#D86735"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="ss">f"Top-ten mean: </span><span class="sc">{</span>top_mean_words<span class="sc">:.1f}</span><span class="ss"> words"</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>ax.bar_label(bars, padding<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>ax.margins(y<span class="op">=</span><span class="fl">0.15</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Card, ordered by EDHREC rank (lower is more popular)"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Rules-text word count"</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">"upper left"</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>plt.setp(ax.get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">"right"</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-top-ten-edhrec" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -395,12 +408,15 @@ Figure&nbsp;2: Rules-text word count versus EDHREC rank for AKH cards not marked
 <img src="index_files/figure-html/fig-top-ten-edhrec-output-1.png" width="1043" height="574" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-top-ten-edhrec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Rules-text length of the ten most popular AKH cards not marked as reprints. Bars show word counts; the x-axis labels give each card’s EDHREC rank.
+Figure&nbsp;3: Rules-text length of the ten most popular AKH cards not marked as reprints. Bars show word counts; the x-axis labels give each card’s EDHREC rank. The dashed line shows the mean word count of these ten cards.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
+<hr>
+<p>Data: <a href="https://mtgjson.com/api/v5/AKH.json">MTGJSON’s Amonkhet dataset</a>, using the saved snapshot dated September 22, 2026, and the CSV prepared in the R post. MTGJSON publishes its data under the <a href="https://mtgjson.com/license/">MIT licence</a>.</p>
+<p>To reproduce the analysis, follow the <a href="https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#build-from-a-fresh-clone">project README</a> for setup, rendering, and running cells interactively. The <a href="https://github.com/firecat1234/firecat1234.github.io/blob/main/data/README.md">data notes</a> explain the CSV format.</p>
 <p><em>AI assistance: ChatGPT helped draft the data preparation and plotting code.</em></p>
 
 
