@@ -34,7 +34,8 @@ if (!file.exists(data_file)) {
 #read file 
 payload <- jsonlite::fromJSON("data/AKH.json")
 cards <- payload$data$cards
-str(cards)
+# Preview six rows without expanding the nested JSON columns.
+head(cards[c("name", "manaValue", "power", "toughness", "rarity")], 6)
 ```
 
 I prefer working with CSV over JSON, so let's change that real quick - 
