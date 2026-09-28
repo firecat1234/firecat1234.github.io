@@ -1,3 +1,6 @@
 /.quarto/
+/_site/
+.DS_Store
+/.venv/
 **/*.quarto_ipynb
 /CX_milestone3_ideas.md

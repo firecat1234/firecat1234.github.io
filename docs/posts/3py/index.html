@@ -219,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In <a href="../../posts/2R/index.html">the R post</a>, I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular in Commander years after the set’s release?</p>
+<p>In <a href="../../posts/2r/index.html">the R post</a>, I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular in Commander years after the set’s release?</p>
 <p>Data: <a href="https://mtgjson.com/api/v5/AKH.json">MTGJSON’s Amonkhet dataset</a>, using the saved snapshot dated September 22, 2026, and the CSV prepared in the R post. MTGJSON publishes its data under the <a href="https://mtgjson.com/license/">MIT licence</a>.</p>
 <p>The dataset’s <a href="https://mtgjson.com/data-models/card/card-set/#edhrecrank">EDHREC rank</a> gives us a rough way to explore staying power. Lower ranks mean greater popularity. This is popularity in the saved snapshot, rather than a record of how each card’s popularity changed over time, and it does not measure tournament success.</p>
 <p>All three comparisons exclude cards marked as reprints in the AKH snapshot, using MTGJSON’s <a href="https://mtgjson.com/data-models/card/card-set/#isreprint">isReprint field</a>. This keeps older cards such as Evolving Wilds out of the analysis. Cards introduced in Amonkhet can still have been printed again later.</p>

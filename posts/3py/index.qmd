@@ -9,9 +9,11 @@ execute:
   echo: true
 ---
 
-In [the R post](../2R/index.qmd), I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular in Commander years after the set's release?
+In [the R post](../2r/index.qmd), I compared creatures using their printed stats and mana costs. Here, I want to look at the fine print: do wordier Amonkhet cards tend to be more popular in Commander years after the set's release?
 
 Data: [MTGJSON's Amonkhet dataset](https://mtgjson.com/api/v5/AKH.json), using the saved snapshot dated September 22, 2026, and the CSV prepared in the R post. MTGJSON publishes its data under the [MIT licence](https://mtgjson.com/license/).
+
+To reproduce the analysis, follow the [project README](https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#build-from-a-fresh-clone) for setup, rendering, and running cells interactively. The [data notes](https://github.com/firecat1234/firecat1234.github.io/blob/main/data/README.md) explain the CSV format.
 
 The dataset's [EDHREC rank](https://mtgjson.com/data-models/card/card-set/#edhrecrank) gives us a rough way to explore staying power. Lower ranks mean greater popularity. This is popularity in the saved snapshot, rather than a record of how each card's popularity changed over time, and it does not measure tournament success.
 

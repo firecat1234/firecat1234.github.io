@@ -11,6 +11,8 @@ execute:
 
 As an example of what can be done with R inside of a Quarto website, I'll be accessing, working with, and analyzing freely licensed data from Amonkhet, one of my favourite Magic the Gathering sets. To start, make sure you have the data, and load it into R:
 
+Data: [MTGJSON's Amonkhet dataset](https://mtgjson.com/api/v5/AKH.json), using the saved snapshot dated September 22, 2026, published under the [MIT licence](https://mtgjson.com/license/). The [project README](https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#build-from-a-fresh-clone) covers setup, rendering, and running cells interactively. The download chunk below is skipped during rendering; see the [manual download instructions](https://github.com/firecat1234/firecat1234.github.io/blob/main/README.md#optional-download-and-csv-regeneration).
+
 ```{r}
 #| label: download-source-data
 #| eval: false
@@ -22,8 +24,9 @@ data_url <- "https://mtgjson.com/api/v5/AKH.json"
 data_file <- "data/AKH.json"
 
 if (!file.exists(data_file)) {
+  dir.create("data", showWarnings = FALSE)
   download.file(data_url, data_file, mode = "wb")
-  dir.create("data", showWarnings = FALSE)} else {
+} else {
   message("Using the existing snapshot: ", data_file)}
 ```
 
