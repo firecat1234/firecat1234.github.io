@@ -77,7 +77,3 @@ uv run --locked quarto render posts/3py/index.qmd
 Open the repository root as your project. Use its renv R session for the R post and its `.venv` Python interpreter for the Python post. Check `getwd()` in R or `Path.cwd()` after `from pathlib import Path` in Python: the working directory should be the repository root, so `data/...` resolves correctly.
 
 The project's `execute-dir: project` setting handles this during rendering; an interactive editor session may need its working directory set separately. See [Quarto's working-directory guide](https://quarto.org/docs/projects/code-execution.html#working-dir).
-
-## Validation status
-
-The full site, including both code execution posts, has rendered successfully in the working checkout. These instructions still need to be followed from a fresh clone before submission.
