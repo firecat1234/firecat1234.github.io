@@ -28,3 +28,11 @@ This is Kai's personal Quarto site. Preserve its casual voice and existing visua
 ## Build and checks
 
 Follow `README.md` for the complete locked Python/R/Quarto build. For content-only previews, render the changed `.qmd` pages with Quarto. Keep drafts excluded from render. Review generated output before including it in an authorized publication; `docs/` is the deployed artifact.
+
+## Project boundaries and the private/public pair
+
+- Keep updates segregated by project, using stable project tags and separate sections when a single roundup covers more than one project. Do not blend one project's release state or plans into another's.
+- Each update can have a private working draft and a separately composed public draft. The private draft may hold context, evidence and unresolved notes; it stays in the private tracker. The public draft must be independently reviewed for audience, accuracy and privacy. Never publish the private draft by simply changing a visibility flag.
+- Cherry Research may later maintain its own Float / RL log. Treat that as a future direction, not an existing publication destination or a reason to duplicate posts now. Link or summarize approved posts across sites when useful, with one canonical home per post.
+- The private tracker may retain project-document/checklist snapshots to help plan and summarize work. Source repositories and their current project documentation remain authoritative. Date snapshots and record their source/ref; recheck against the repository before making current claims. A tracker snapshot must not silently replace or overwrite a project's source docs.
+- Public updates are selective communication, not a mirror of every private checklist item. All text, media and any cross-site reuse remain subject to explicit human review before publication.

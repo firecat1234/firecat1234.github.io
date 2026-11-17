@@ -103,3 +103,11 @@ The public site must never fetch the private journal or expose its raw CSV/entri
 - Include public commit/PR links where useful. Keep internal evidence, approvals/audit records, credentials and private URLs on the private side.
 
 Review the export package before importing it into a draft branch. Importing content, rendering, and deploying are separate steps: none grants automatic publication permission. This repository contains only the receiving convention, not an authenticated connection or automated export/import/deploy pipeline.
+
+### Project boundaries and companion drafts
+
+Keep project tags stable, with each project's progress and release state distinct. Each update may have a private working version in the tracker and a separately composed public draft here; only the public-safe version enters this repository. The private exporter convention is `public-approved/<slug>/index.qmd` plus explicitly allowlisted media, producing `public-export/updates/`. An empty approval manifest exports nothing. This is a package handoff, not an automatic connection to GitHub or deployment.
+
+Tracker project-document/checklist snapshots are dated references, not the authority: current source repositories and their project docs win. Verify snapshots before using them as current release evidence.
+
+Cherry Research may eventually have a separate Float / RL log. No second log is created or synchronized by this draft. Prefer a canonical home with links or approved summaries rather than automatically duplicating updates across sites.
