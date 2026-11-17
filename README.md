@@ -77,3 +77,19 @@ uv run --locked quarto render posts/3py/index.qmd
 Open the repository root as your project. Use its renv R session for the R post and its `.venv` Python interpreter for the Python post. Check `getwd()` in R or `Path.cwd()` after `from pathlib import Path` in Python: the working directory should be the repository root, so `data/...` resolves correctly.
 
 The project's `execute-dir: project` setting handles this during rendering; an interactive editor session may need its working directory set separately. See [Quarto's working-directory guide](https://quarto.org/docs/projects/code-execution.html#working-dir).
+
+
+## Updates / patch notes (draft workflow)
+
+`updates.qmd` is the cross-project feed; the existing Blog is unchanged. Draft source lives in `_drafts/updates/`, which is excluded from rendering. Start from `template.md`; follow `AGENTS.md` for commit evidence, screenshot privacy, and mandatory human review. No posts are published by this initial draft.
+
+For a content-only preview without running the analysis posts:
+
+```sh
+quarto render updates.qmd
+quarto render projects.qmd
+```
+
+The complete build still requires the locked R/Python setup above. After approval, render the whole site so every navigation bar is refreshed before publishing `docs/`. Do not publish merely to preview.
+
+Pending editorial links: verified public ChatGPT creator profile, and the intended public Jungle destination. Private repositories are deliberately not linked publicly.

@@ -170,3 +170,33 @@ main.content {
 .project-entry > :last-child {
   margin-bottom: 0;
 }
+
+/* Compact, readable cross-project navigation and update notes. */
+.project-links, .project-directory-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: .85rem 0;
+}
+.project-links a, .project-directory-links a {
+  display: inline-block;
+  padding: .45rem .75rem;
+  border: 1px solid #63416e;
+  border-radius: .35rem;
+  background: #f5ebf8;
+  color: #482355;
+  text-decoration: none;
+}
+.project-links a:hover, .project-directory-links a:hover { background: #ead7f0; }
+.project-links a:focus-visible, .project-directory-links a:focus-visible {
+  outline: 3px solid #49245e;
+  outline-offset: 3px;
+}
+.project-access { font-size: .9rem; color: #392440; }
+.updates-intro, .updates-empty {
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  border-left: 3px solid #63416e;
+  background: rgb(255 255 255 / 35%);
+}
+.updates-empty h2 { margin-top: 0; }

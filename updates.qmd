@@ -1,0 +1,31 @@
+---
+title: "Updates"
+subtitle: "patch notes"
+toc: false
+listing:
+  contents: updates
+  sort: "date desc"
+  type: default
+  categories: true
+  filter-ui: true
+  sort-ui: true
+  fields: [date, title, description, categories]
+---
+
+small notes from the things i'm making: new features, work in progress, fixes, and where things are going.
+
+::: {.updates-intro}
+
+**across projects, as things happen.** sometimes a screenshot, sometimes a small fix worth mentioning. these are casual notes, not a release schedule.
+
+[explore the projects](projects.qmd) · [longer writing](blog.qmd)
+
+:::
+
+::: {.updates-empty}
+
+## first notes coming soon
+
+nothing published here yet. in the meantime, the [projects page](projects.qmd) has places to try things and follow the code.
+
+:::
