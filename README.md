@@ -77,3 +77,39 @@ uv run --locked quarto render posts/3py/index.qmd
 Open the repository root as your project. Use its renv R session for the R post and its `.venv` Python interpreter for the Python post. Check `getwd()` in R or `Path.cwd()` after `from pathlib import Path` in Python: the working directory should be the repository root, so `data/...` resolves correctly.
 
 The project's `execute-dir: project` setting handles this during rendering; an interactive editor session may need its working directory set separately. See [Quarto's working-directory guide](https://quarto.org/docs/projects/code-execution.html#working-dir).
+
+
+## Updates / patch notes
+
+`updates.qmd` is the cross-project feed; the existing Blog is unchanged. Draft source lives in `_drafts/updates/`, which is excluded from rendering. Start from `template.md`; follow `AGENTS.md` for commit evidence, screenshot privacy, and mandatory human review. The feed is live once the site is published; each new update post still requires its own approval.
+
+For a content-only preview without running the analysis posts:
+
+```sh
+quarto render updates.qmd
+quarto render projects.qmd
+```
+
+The Updates page shows only its welcome message while there are no published entries. Its synchronous after-body script removes the empty listing before Quarto initializes List.js. Once entries exist, the message is hidden and a labelled Project selector offers “All projects” at every screen width; it shares the sidebar/tag filtering behavior. Keep this script synchronous (no `async` or `defer`) so the empty-list check runs before `DOMContentLoaded`.
+
+The complete build still requires the locked R/Python setup above. After approval, render the whole site so every navigation bar is refreshed before publishing `docs/`. Do not publish merely to preview.
+
+Pending editorial links: verified public ChatGPT creator profile, and the intended public Jungle destination. Private repositories are deliberately not linked publicly.
+
+### Future private-tracker handoff (not wired yet)
+
+The public site must never fetch the private journal or expose its raw CSV/entries. A future exporter should produce a separate, explicitly human-approved **public-safe package**:
+
+- `updates/<slug>/index.qmd`: front matter `title`, `description`, `date` (`YYYY-MM-DD`), and `categories` (project tags), followed by approved Markdown. Remove `draft: true` only after approval of that exact text/media.
+- Optional media in the same entry directory, referenced with relative paths, alt text and captions. Only approved public-safe images; no private screenshots or metadata.
+- Include public commit/PR links where useful. Keep internal evidence, approvals/audit records, credentials and private URLs on the private side.
+
+Review the export package before importing it into a draft branch. Importing content, rendering, and deploying are separate steps: none grants automatic publication permission. This repository contains only the receiving convention, not an authenticated connection or automated export/import/deploy pipeline.
+
+### Project boundaries and companion drafts
+
+Keep project tags stable, with each project's progress and release state distinct. Each update may have a private working version in the tracker and a separately composed public draft here; only the public-safe version enters this repository. The private exporter convention is `public-approved/<slug>/index.qmd` plus explicitly allowlisted media, producing `public-export/updates/`. An empty approval manifest exports nothing. This is a package handoff, not an automatic connection to GitHub or deployment.
+
+Tracker project-document/checklist snapshots are dated references, not the authority: current source repositories and their project docs win. Verify snapshots before using them as current release evidence.
+
+Cherry Research may eventually have a separate Float / RL log. No second log is created or synchronized by this draft. Prefer a canonical home with links or approved summaries rather than automatically duplicating updates across sites.

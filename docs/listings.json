@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/updates.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/posts/3py/index.html",

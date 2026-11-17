@@ -4,6 +4,7 @@ project:
   execute-dir: project
   render:
     - "**/*.qmd"
+    - "!_drafts/**"
   resources:
     - ".nojekyll"
   
@@ -16,6 +17,8 @@ website:
       - about.qmd
       - href: projects.qmd
         text: Projects
+      - href: updates.qmd
+        text: Updates
       - href: blog.qmd
         text: Blog
 
