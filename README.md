@@ -79,9 +79,9 @@ Open the repository root as your project. Use its renv R session for the R post 
 The project's `execute-dir: project` setting handles this during rendering; an interactive editor session may need its working directory set separately. See [Quarto's working-directory guide](https://quarto.org/docs/projects/code-execution.html#working-dir).
 
 
-## Updates / patch notes (draft workflow)
+## Updates / patch notes
 
-`updates.qmd` is the cross-project feed; the existing Blog is unchanged. Draft source lives in `_drafts/updates/`, which is excluded from rendering. Start from `template.md`; follow `AGENTS.md` for commit evidence, screenshot privacy, and mandatory human review. No posts are published by this initial draft.
+`updates.qmd` is the cross-project feed; the existing Blog is unchanged. Draft source lives in `_drafts/updates/`, which is excluded from rendering. Start from `template.md`; follow `AGENTS.md` for commit evidence, screenshot privacy, and mandatory human review. The feed is live once the site is published; each new update post still requires its own approval.
 
 For a content-only preview without running the analysis posts:
 
