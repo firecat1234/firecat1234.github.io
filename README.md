@@ -93,3 +93,13 @@ quarto render projects.qmd
 The complete build still requires the locked R/Python setup above. After approval, render the whole site so every navigation bar is refreshed before publishing `docs/`. Do not publish merely to preview.
 
 Pending editorial links: verified public ChatGPT creator profile, and the intended public Jungle destination. Private repositories are deliberately not linked publicly.
+
+### Future private-tracker handoff (not wired yet)
+
+The public site must never fetch the private journal or expose its raw CSV/entries. A future exporter should produce a separate, explicitly human-approved **public-safe package**:
+
+- `updates/<slug>/index.qmd`: front matter `title`, `description`, `date` (`YYYY-MM-DD`), and `categories` (project tags), followed by approved Markdown. Remove `draft: true` only after approval of that exact text/media.
+- Optional media in the same entry directory, referenced with relative paths, alt text and captions. Only approved public-safe images; no private screenshots or metadata.
+- Include public commit/PR links where useful. Keep internal evidence, approvals/audit records, credentials and private URLs on the private side.
+
+Review the export package before importing it into a draft branch. Importing content, rendering, and deploying are separate steps: none grants automatic publication permission. This repository contains only the receiving convention, not an authenticated connection or automated export/import/deploy pipeline.
