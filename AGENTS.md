@@ -16,7 +16,7 @@ This is Kai's personal Quarto site. Preserve its casual voice and existing visua
 - Prepare public-safe post drafts in `_drafts/updates/` (use `template.md`), outside the rendered site. Keep `draft: true` while unapproved. This repository is public: render exclusion does NOT make a committed file private. Keep the private cross-project journal, tracker, sensitive evidence and internal notes in a separate private workspace, never in this repository.
 - Show the proposed text and media to Kai. Explicit human approval is required for every post before moving it into `updates/<slug>/index.qmd` and removing `draft: true`.
 - Approval of this workflow is not approval of future posts. Do not auto-publish, schedule publication, merge, or deploy without authorization. A request to draft is not a request to publish.
-- Before publication, remove the landing page's “first notes coming soon” block once an approved post exists. Render and inspect desktop/mobile output and links. Do not hand-edit generated HTML as the source of truth.
+- The landing page automatically shows “first notes coming soon” only while the feed is empty. Before publication, render and inspect desktop/mobile output and links. Do not hand-edit generated HTML as the source of truth.
 
 ## Project directory
 

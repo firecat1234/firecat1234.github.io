@@ -90,6 +90,8 @@ quarto render updates.qmd
 quarto render projects.qmd
 ```
 
+The Updates page shows only its welcome message while there are no published entries. Its synchronous after-body script removes the empty listing before Quarto initializes List.js. Once entries exist, the message is hidden and a labelled Project selector offers “All projects” at every screen width; it shares the sidebar/tag filtering behavior. Keep this script synchronous (no `async` or `defer`) so the empty-list check runs before `DOMContentLoaded`.
+
 The complete build still requires the locked R/Python setup above. After approval, render the whole site so every navigation bar is refreshed before publishing `docs/`. Do not publish merely to preview.
 
 Pending editorial links: verified public ChatGPT creator profile, and the intended public Jungle destination. Private repositories are deliberately not linked publicly.

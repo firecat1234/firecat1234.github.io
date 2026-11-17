@@ -200,3 +200,23 @@ main.content {
   background: rgb(255 255 255 / 35%);
 }
 .updates-empty h2 { margin-top: 0; }
+
+.updates-project-filter {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin-bottom: 1rem;
+}
+.updates-project-filter label { flex-shrink: 0; }
+.updates-project-filter select { max-width: 18rem; }
+@media (max-width: 575.98px) {
+  .updates-page .listing-actions-group {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+  .updates-page .listing-actions-group .input-group {
+    width: 100%;
+    margin: 0;
+  }
+}

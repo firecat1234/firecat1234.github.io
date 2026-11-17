@@ -2,6 +2,10 @@
 title: "Updates"
 subtitle: "patch notes"
 toc: false
+body-classes: updates-page
+include-after-body:
+  text: |
+    <script src="scripts/updates.js"></script>
 listing:
   contents: updates
   sort: "date desc"
